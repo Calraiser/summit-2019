@@ -1,0 +1,124 @@
+{
+  "name": "kollegorna-middleman-boilerplate",
+  "version": "2.0.0",
+  "description": "Kollegorna Middleman boilerplate",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=development ./node_modules/webpack/bin/webpack.js --watch -d --color",
+    "build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail -p",
+    "lint": "npm run -s lint:javascript && npm run -s lint:stylesheets",
+    "lint:scripts": "eslint assets/javascript",
+    "lint:styles": "stylelint assets/stylesheets/**/*.{css,sass,scss,sss,less}",
+    "test": "npm run -s lint"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "eslintConfig": {
+    "root": true,
+    "extends": "eslint:recommended",
+    "globals": {
+      "wp": true
+    },
+    "env": {
+      "node": true,
+      "es6": true,
+      "amd": true,
+      "browser": true,
+      "jquery": true
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "globalReturn": true,
+        "generators": false,
+        "objectLiteralDuplicateProperties": false,
+        "experimentalObjectRestSpread": true
+      },
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "import"
+    ],
+    "settings": {
+      "import/core-modules": [],
+      "import/ignore": [
+        "node_modules",
+        "\\.(coffee|scss|css|less|hbs|svg|json)$"
+      ]
+    },
+    "rules": {
+      "no-console": "off",
+      "no-undef": "off",
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "always-multiline",
+          "exports": "always-multiline",
+          "functions": "ignore"
+        }
+      ]
+    }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-prettier"
+    ],
+    "rules": {
+      "at-rule-empty-line-before": null,
+      "block-opening-brace-space-before": null,
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "extend",
+            "at-root",
+            "debug",
+            "warn",
+            "error",
+            "if",
+            "else",
+            "for",
+            "each",
+            "while",
+            "mixin",
+            "include",
+            "content",
+            "return",
+            "function"
+          ]
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.9",
+    "eslint": "~4.2",
+    "eslint-loader": "~1.9",
+    "eslint-plugin-import": "~2.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.2",
+    "stylelint": "~7.12",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-standard": "~16.0",
+    "stylelint-webpack-plugin": "^0.8.0",
+    "webpack": "^3.11.0"
+  },
+  "dependencies": {}
+}

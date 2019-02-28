@@ -1,0 +1,23 @@
+# Environment variables
+.envrc
+
+# Bundler config
+/.bundle
+
+# Built site
+/build
+
+# Data
+/data
+
+# Vendor
+/vendor
+
+# Node modules
+/node_modules
+
+.tmp/
+
+# Misc
+.DS_Store
+.sass-cache

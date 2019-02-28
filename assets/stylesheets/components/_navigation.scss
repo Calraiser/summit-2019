@@ -1,0 +1,8 @@
+.navigation {
+  display: flex;
+  li {
+    a {
+      @extend %txt-paragraph;
+    }
+  }
+}
