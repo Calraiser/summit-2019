@@ -1,4 +1,4 @@
-This is the boilerplate for [Kollegornas](https://github.com/kollegorna) Middleman projects. We're currently using Middleman 4.2.
+This is the boilerplate for LUCA Middleman projects. We're currently using Middleman 4.2.
 
 ## Local setup
 
