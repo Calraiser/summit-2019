@@ -12,7 +12,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
 gem 'middleman',                '4.2.1'
-gem 'middleman-minify-html'
+gem 'middleman-minify-html',    '~> 3.4.1'
 
 gem 'oga',                       '~> 2.8'
 
