@@ -1,0 +1,40 @@
+.info {
+  padding-left: 90px;
+  padding-right: 90px;
+  &-text {
+    font-family: Telefonicaregular;
+    font-size: 28px;
+    color: $grey11;
+    line-height: 42px;
+    strong {
+      color: $blue;
+    }
+  }
+  .content {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.info-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $purple2;
+  padding: 20px 30px 20px 70px;
+  margin: 90px 0;
+  .c-btn {
+    background: $white;
+  }
+  &__text {
+    .bx--type-h1 {
+      color: $white;
+      font-family: Telefonicalight;
+    }
+    .note {
+      color: $white;
+      font-family: Telefonicaregular;
+      font-size: 18px;
+    }
+  }
+}

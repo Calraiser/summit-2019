@@ -1,94 +1,99 @@
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const Clean = require('clean-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
+var webpack = require('webpack');
+var path = require('path');
+var ManifestPlugin = require('webpack-manifest-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+
+const outputPath = path.join(__dirname, '.webpack_build');
 
 module.exports = {
   entry: {
-    main: './assets/javascript/application.js',
+    site: path.join(__dirname, '/index.js')
+  },
+
+  output: {
+    path: outputPath,
+    filename: '[name]-[hash].js',
+    publicPath: '/'
   },
 
   resolve: {
     modules: [
-      __dirname + '/assets/javascript',
-      __dirname + '/assets/stylesheets',
-      __dirname + '/node_modules',
-    ],
-    extensions: ['.js', '.css', '.scss']
-  },
-
-  output: {
-    path: __dirname + '/.tmp/dist',
-    filename: 'assets/javascript/[name].bundle.js',
+      'node_modules'
+    ]
   },
 
   module: {
-    loaders: [
+    rules: [
+      {
+        test: /\.(woff|woff2|eot|ttf|svg|ico|jpg|jpeg|png)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 5000,
+              name: './assets/[name]-[hash].[ext]'
+            }
+          }
+        ]
+      },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules|bower_components)/,
         use: [
-          "babel-loader",
-          "eslint-loader",
-        ],
-      },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            'css-loader',
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: function () {
-                  return [
-                    require('autoprefixer')
-                  ];
-                }
-              }
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015']
             }
-          ]}),
+          }
+        ]
       },
       {
-        test: /\.scss$|.sass$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            'css-loader',
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: function () {
-                  return [
-                    require('autoprefixer')
-                  ];
-                }
-              }
-            },
-            'sass-loader'
-          ]
-        }),
+        test: /\.(css|scss)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name]-[hash].css'
+            }
+          },
+          {
+            loader: 'extract-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'resolve-url-loader'
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       }
     ]
   },
 
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    new ManifestPlugin({
+      fileName: 'rev-manifest.json'
+    }),
+    new CleanWebpackPlugin([outputPath], {
+      root: __dirname
+    }),
+    new BrowserSyncPlugin(
+      {
+        host: 'localhost',
+        port: 3000,
+        proxy: 'http://localhost:4567/'
       },
-    }),
-    new Clean(['.tmp']),
-    new ExtractTextPlugin("assets/stylesheets/[name].bundle.css"),
-    new webpack.LoaderOptionsPlugin({
-      test: /\.js$/,
-      options: {
-        eslint: { failOnWarning: false, failOnError: true },
-      },
-    }),
-    new StyleLintPlugin({
-      syntax: 'scss',
-    }),
-  ],
+      {
+        reloadDelay: 2000
+      }
+    )
+  ]
 };

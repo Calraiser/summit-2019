@@ -1,0 +1,64 @@
+.featured {
+  background-image: url("assets/images/fondo–poliedros2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px;
+  margin-top: 70px;
+
+  .featured-box {
+    display: flex;
+    background: $white;
+
+    .featured-box__item +
+    .featured-box__item {
+      border-left: 1px solid $grey07;
+    }
+      &__item {
+        padding: 30px;
+        position: relative;
+        flex: 1;
+        .bx--type-p {
+          margin-bottom: 15px;
+          @extend %txt-text-negative;
+          color: $grey09;
+        }
+        .c-btn {
+          position: absolute;
+          bottom: 30px;
+        }
+        .note {
+          margin-bottom: 20px;
+          font-size: 16px;
+          font-family: Telefonicabold;
+          color: $grey10;
+          a {
+            color: $blue01;
+          }
+          &-green {
+            color: $green;
+          }
+        }
+        .bx--type-h1 {
+          margin-bottom: 30px;
+          font-family: Telefonicaregular;
+        }
+        &-blue {
+          background: $blue;
+
+          .bx--type-h1,
+          .bx--type-p {
+            color: $white;
+          }
+        }
+        .actions {
+          padding-top: 5px;
+          .bx--type-note {
+            margin: 2px 0;
+            a {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }

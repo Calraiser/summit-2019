@@ -1,0 +1,11 @@
+.navigation {
+  li {
+    display: inline-block;
+    margin: 0 35px;
+    a {
+      @extend %txt-links-positive;
+      font-size: 16px;
+      color: $grey04;
+    }
+  }
+}

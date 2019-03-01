@@ -1,0 +1,25 @@
+.heading {
+  background-image: url('assets/images/fondo-poliedros.png');
+  background-size: cover;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  margin-bottom: 85px;
+  &-title {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+  .bx--type-xl {
+    margin: 2px 0 5px;
+  }
+
+  .bx--type-quote {
+    color: $blue;
+    font-family: Telefonicalight;
+  }
+
+  .bx--type-h3 {
+    font-weight: normal;
+    font-family: Telefonicalight;
+  }
+}

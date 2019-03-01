@@ -1,0 +1,245 @@
+/* =============================================================================
+   BUTTONS (components/_buttons.scss)
+   ========================================================================== */
+
+/* Settings
+   ========================================================================== */
+
+$button-default-background-color: #bbbbbb !default;
+$button-default-text-color: $white !default;
+$btn-height: 38px;
+$button-colors: (
+	'dark': $black,
+	'red': $orange,
+	'green': $green,
+	'blue': $blue,
+) !default;
+
+%btn-primary-ico {
+  text-align: left;
+  @include padding(null 20px);
+  .ico {
+    @include padding(null null null 20px);
+  }
+}
+
+.c-btn {
+  position: relative;
+  display: inline-block;
+  border-radius: 42px;
+	padding: .540rem .75rem;
+  @include padding(null 20px);
+	font-size: rem-calc(14);
+	line-height: 1.5;
+
+  overflow: hidden;
+  vertical-align: middle;
+  z-index: 1;
+
+  cursor: pointer;
+
+  font-family: 'Telefonicabold';
+  text-align: center;
+  text-transform: uppercase;
+
+  transition: all 0.25s ease;
+	box-sizing: content-box;
+
+  &.btn-large {
+    width: 170px;
+  }
+  &.btn-medium {
+    width: 122px;
+  }
+  &.btn-small {
+    width: 74px;
+		.ico-caret {
+			padding: 0 15px !important;
+		}
+		.ico {
+			margin-left: 0;
+		}
+  }
+  &.wide {
+    width: 100%;
+  }
+  &.disabled {
+    opacity: 0.3 !important;
+    border: 2px solid $grey !important;
+    color: $grey !important;
+		cursor: not-allowed;
+		pointer-events:none;
+    &:after {
+      display: none;
+    }
+    &:hover {
+      background: none !important;
+      color: $grey !important;
+    }
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+.btn-primary {
+  color: $green;
+  border: 2px solid $green;
+  background: transparent;
+  &:hover, &.hover {
+    color: $white;
+    background: $green;
+  }
+  &.has-icon {
+    @extend %btn-primary-ico;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.icon-check {
+			font-size: rem-calc(17);
+		}
+		&.btn-small:not(.inverse) {
+			width: 87px;
+			padding-right: 12px;
+			padding-left: 15px;
+		}
+  }
+}
+
+.btn-primary.filled {
+  color: #fff;
+  border: 2px solid $green;
+  background: transparent;
+  &:before {
+    background: $green;
+    border: 0;
+  }
+  &:after {
+    background: $black;
+    border: 0;
+  }
+}
+
+.btn-secondary {
+  color: $blue;
+  border: 2px solid $blue;
+  background: $white;
+	&.disabled {
+		.icon-expand_more {
+			border-left: 2px solid $grey !important;
+		}
+	}
+  &:hover, &.hover {
+    color: $white;
+    background: $blue;
+		border: 2px solid $white;
+		.icon-expand_more {
+			border-left: 2px solid $white !important;
+		}
+  }
+  &.has-icon {
+    text-align: left;
+    padding: 0 0 0 20px;
+    display: flex;
+		justify-content: space-between;
+		align-items: center;
+    .ico {
+      padding-left: 20px;
+    }
+    .btn-text {
+      flex: 1;
+
+    }
+    .icon-expand_more {
+      display: block;
+      padding: 5px 17px 0;
+      order: 1;
+      border-left: 2px solid $blue;
+			display: flex;
+			align-items: center;
+			height: 31px;
+			font-size: rem-calc(12);
+    }
+
+		&.btn-large {
+			width: 190px;
+		}
+		&.btn-medium {
+			width: 142px;
+		}
+		&.btn-small {
+			padding-left: 15px;
+			width: 99px;
+
+		}
+		&.btn-medium,
+		&.btn-small {
+			.icon-expand_more {
+				padding: 5px 11px 0 !important;
+			}
+		}
+  }
+}
+
+.btn-secondary.filled {
+  color: #fff;
+  border: 1px solid $green;
+  background: transparent;
+}
+
+.btn-primary.inverse {
+  color: $grey04;
+  border: 2px solid $grey04;
+  background: transparent;
+  &:hover, &.hover {
+    color: $white;
+    background: $grey04;
+  }
+  &.has-icon {
+    @extend %btn-primary-ico;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.icon-ic-close {
+			font-size: rem-calc(12);
+		}
+  }
+}
+
+.btn-primary.inverse-white {
+  color: #fff;
+  border: 1px solid #fff;
+  background: transparent;
+  &:before {
+    background: transparent;
+    border: 1px solid transparent;
+  }
+  &:after {
+    background: rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+}
+
+.actions {
+	.c-btn + .c-btn {
+		margin-left: 15px;
+	}
+}
+
+
+/**
+ * Color variations. To add new color variation you have to add new value in
+ * `$button-colors` map on top of the file.
+ */
+
+@each $color-key, $color-value in $button-colors {
+	.c-btn--#{$color-key} {
+		background-color: $color-value;
+	}
+}
