@@ -9,9 +9,32 @@ title: LUCA Summit
 <section class="info">
   <%= partial "components/info" %>
 </section>
-
 <section class="description">
-  <%= partial "components/description" %>
+  <div class="content">
+  <div class="lds-tab--section"><input checked="checked" id="atp" name="tabs" type="radio">
+    <div class="tab-label-content" id="atp">
+      <label class="bx--type-p tab-label" for="atp">ATP – Account Takeover Protection</label>
+      <div class="tab-content">
+
+      </div>
+    </div>
+    <input id="match" name="tabs" type="radio">
+    <div class="tab-label-content" id="match">
+      <label class="bx--type-p tab-label" for="match">MATCH</label>
+      <div class="tab-content">
+        <p class="bx--type-p">Content for Item 2 goes here.</p>
+      </div>
+    </div>
+    <input id="verify" name="tabs" type="radio">
+    <div class="tab-label-content" id="verify">
+      <label class="bx--type-p tab-label" for="verify">VERIFY</label>
+      <div class="tab-content">
+        <%= partial "components/description" %>
+      </div>
+    </div>
+    <div class="slide"></div>
+  </div>
+</div>
 </section>
 
 <section class="global-actions">
@@ -21,10 +44,13 @@ title: LUCA Summit
         <i class="ico icon-expand_more"></i>
         <span class="c-btn-text">Product sheet</span>
       </a>
-      <a href="#" class="c-btn btn-secondary has-icon btn-large">
+
+      <a href="#" class="c-btn btn-secondary has-icon btn-large" data-toggle="modal" data-target="#demo">
         <i class="ico icon-expand_more"></i>
         <span class="c-btn-text">See demo online</span>
       </a>
     </div>
   </div>
 </section>
+
+<%= partial "components/fake_demo" %>

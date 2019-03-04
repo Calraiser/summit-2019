@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import "~bootstrap/scss/bootstrap";
+
 @import "vendors/normalize";
 @import "base/mixins";
 @import "vendors/bourbon";
@@ -24,6 +26,8 @@
 @import "components/info";
 @import "components/description";
 @import "components/info_icons";
+@import "components/tabs";
+@import "components/fake_demo";
 
 // 3. layout/
 @import "layout/logo";

@@ -16,15 +16,20 @@
       &__item {
         padding: 30px;
         position: relative;
-        flex: 1;
+        border-bottom: 0;
+        @include media($mobile) {
+          border-bottom: 1px solid #ccc;;
+        }
         .bx--type-p {
           margin-bottom: 15px;
           @extend %txt-text-negative;
           color: $grey09;
         }
         .c-btn {
-          position: absolute;
           bottom: 30px;
+          @include media($mobile) {
+            position: absolute;
+          }
         }
         .note {
           margin-bottom: 20px;

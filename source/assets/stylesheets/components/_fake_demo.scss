@@ -1,0 +1,240 @@
+.titleDemo{
+    font-family: TelefonicaExtraLight;
+    font-size: 48px;
+    color: #00AAEE;
+    line-height: 1em;
+}
+
+.subtitleDemo{
+    font-family: Telefonica;
+    font-size: 24px;
+    color: #3A3A3A;
+}
+
+.labelInput{
+    font-family: Telefonica;
+    font-size: 14px;
+    color:#4A4A4A;
+}
+
+#buttonSummit{
+    border:2px solid #1AA992;
+    font-family: TelefonicaBold;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #1AA992;
+    background-color: transparent;
+    border-radius: 30px;
+    width: 166px;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: .2s;
+    display: block;
+}
+
+#buttonSummit:hover{
+    color: #FFFFFF;
+    background-color: #1AA992;
+}
+
+#luca-logo{
+    height:20px;
+}
+
+#data-unit-logo{
+    height:20px;
+}
+
+#close-icon{
+    padding: 15px 15px 0 15px;
+}
+
+#phone{
+    border: none;
+    padding: 5px 0;
+    font-family: Telefonica;
+    font-size: 18px;
+    color: #999999;
+    width:240px;
+}
+
+input::placeholder {
+    color: #999999;
+}
+
+#phone:focus{
+    outline:none;
+}
+
+#progressBack{
+    position:absolute;
+    bottom:0;
+    background-color:#F6F6F6;
+    width: 240px !important;
+    height:4px;
+}
+
+#progressFront{
+    position:absolute;
+    bottom:0;
+    background-color:#1AA992;
+    width: 0px;height:4px;
+}
+
+#progressIco{
+    position:absolute;
+    top:5px;
+    right:25px;
+    background-color:#1AA992;
+    width: 0px;
+    height:4px;
+}
+
+#inputPhone{
+    position:relative;
+    width: 240px;
+}
+
+#resultBackground{
+    width:132px;
+    height:132px;
+    background-color: #D0021B;
+    border-radius: 66px;
+    margin:auto;
+}
+
+#result{
+    display:none;
+}
+
+#resultText{
+    margin-top:10px;
+    font-family: Telefonica;
+    font-size: 24px;
+    text-align:center;
+}
+
+#resultDescription{
+    padding-top: 10px;
+    font-family: Telefonica;
+    font-size: 18px;
+    display: none;
+    width: 230px;
+}
+
+.modal-footer{
+    background-color: #F6F6F6;
+    svg {
+      fill: $white;
+    }
+}
+
+.modal-content{
+    height:450px !important;
+    width:640px !important;
+}
+
+.modal-dialog{
+    height:450px !important;
+    width:640px !important;
+    max-width: 640px !important;;
+}
+
+.modal-body{
+    padding: 0 40px 0 40px !important;
+}
+
+.modal-header{
+    border: 0;
+    padding: 0;
+}
+
+.modal-footer{
+    border: 0;
+    padding: 0;
+}
+
+.separatorInput{
+    margin-top: 75px;
+}
+
+.separatorResult{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.separatorButton{
+    margin: auto;
+    margin-top: 88px;
+
+}
+
+.close{
+    cursor: pointer;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+
+    .modal-content{
+        height:auto !important;
+        width:auto !important;
+    }
+
+    .modal-dialog{
+        height:auto !important;
+        width:auto !important;
+    }
+
+    .separatorInput{
+        margin-top: 45px;
+        margin-bottom: 40px;
+    }
+    .separatorButton{
+        margin-top: 58px;
+        margin-bottom: 40px;
+    }
+
+    .separatorResult{
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media (max-width: 577px) {
+
+    .modal-content{
+        height:auto !important;
+        width:auto !important;
+    }
+
+    .modal-dialog{
+        height:auto !important;
+        width:auto !important;
+    }
+
+    .separatorInput{
+        margin-top: 45px;
+        margin-bottom: 40px;
+    }
+    .separatorButton{
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+
+    .separatorResult{
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+
+}
