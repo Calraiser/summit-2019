@@ -1,8 +1,11 @@
 .top-bar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 18px 45px;
+  flex-wrap: wrap;
+  padding: 18px 25px 0;
+  @include media($tablet) {
+    padding: 35px 0 15px;
+  }
   #logo-luca {
     fill: #000;
   }

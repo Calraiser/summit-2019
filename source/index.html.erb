@@ -9,32 +9,37 @@ title: LUCA Summit
 <section class="info">
   <%= partial "components/info" %>
 </section>
+
 <section class="description">
   <div class="content">
   <div class="lds-tab--section"><input checked="checked" id="atp" name="tabs" type="radio">
     <div class="tab-label-content" id="atp">
-      <label class="bx--type-p tab-label" for="atp">ATP – Account Takeover Protection</label>
+      <label class="bx--type-p tab-label" for="atp">ATP – Account Takeover</label>
       <div class="tab-content">
-
+        <%=  partial :"components/description", :locals => { :item => data.description.items.atp } %>
       </div>
     </div>
     <input id="match" name="tabs" type="radio">
     <div class="tab-label-content" id="match">
       <label class="bx--type-p tab-label" for="match">MATCH</label>
       <div class="tab-content">
-        <p class="bx--type-p">Content for Item 2 goes here.</p>
+        <%=  partial :"components/description", :locals => { :item => data.description.items.match } %>
       </div>
     </div>
     <input id="verify" name="tabs" type="radio">
     <div class="tab-label-content" id="verify">
       <label class="bx--type-p tab-label" for="verify">VERIFY</label>
       <div class="tab-content">
-        <%= partial "components/description" %>
+        <%=  partial :"components/description", :locals => { :item => data.description.items.verify } %>
       </div>
     </div>
     <div class="slide"></div>
   </div>
 </div>
+</section>
+
+<section class="info-icons">
+  <%= partial "components/info_icons" %>
 </section>
 
 <section class="global-actions">
@@ -46,7 +51,7 @@ title: LUCA Summit
       </a>
 
       <a href="#" class="c-btn btn-secondary has-icon btn-large" data-toggle="modal" data-target="#demo">
-        <i class="ico icon-expand_more"></i>
+        <i class="ico icon-chevron_right"></i>
         <span class="c-btn-text">See demo online</span>
       </a>
     </div>

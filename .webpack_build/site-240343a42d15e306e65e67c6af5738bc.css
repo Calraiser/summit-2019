@@ -10993,6 +10993,21 @@ template {
   src: url("/assets/fonts/telefonica-bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/telefonica-bold.woff") format("woff"), url("/assets/fonts/telefonica-bold.ttf") format("truetype"), url("/assets/fonts/telefonica-bold.svg#Telefonicabold") format("svg");
 }
 
+@font-face {
+  font-family: "fontcustom";
+  src: url("/assets/fonts/fontcustom_42b25de51cf2f52c9b0eee69434f5023.eot");
+  src: url("/assets/fonts/fontcustom_42b25de51cf2f52c9b0eee69434f5023.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/fontcustom_42b25de51cf2f52c9b0eee69434f5023.woff2") format("woff2"), url("/assets/fonts/fontcustom_42b25de51cf2f52c9b0eee69434f5023.woff") format("woff"), url("/assets/fonts/fontcustom_42b25de51cf2f52c9b0eee69434f5023.ttf") format("truetype"), url("/assets/fonts/fontcustom_42b25de51cf2f52c9b0eee69434f5023.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+@font-face {
+    font-family: "fontcustom";
+    src: url(/./assets/fontcustom_42b25de51cf2f52c9b0eee69434f5023-38052b4a63486eb52ea3dd5c88fee943.svg) format("svg");
+}
+}
+
 /* 768px */
 
 /* 1024px */
@@ -11660,10 +11675,8 @@ h2.title {
   position: relative;
   display: inline-block;
   border-radius: 42px;
-  padding: .540rem .75rem;
-  padding-right: 20px;
-  padding-left: 20px;
-  font-size: rem-calc(14);
+  padding: 8px 20px;
+  font-size: 14px;
   line-height: 1.5;
   overflow: hidden;
   vertical-align: middle;
@@ -11745,7 +11758,7 @@ h2.title {
 }
 
 .btn-primary.has-icon .icon-check {
-  font-size: rem-calc(17);
+  font-size: 17px;
 }
 
 .btn-primary.has-icon.btn-small:not(.inverse) {
@@ -11776,7 +11789,7 @@ h2.title {
   background: #fff;
 }
 
-.btn-secondary.disabled .icon-expand_more {
+.btn-secondary.disabled .ico {
   border-left: 2px solid #4A4A4A !important;
 }
 
@@ -11787,8 +11800,8 @@ h2.title {
   border: 2px solid #fff;
 }
 
-.btn-secondary:hover .icon-expand_more,
-.btn-secondary.hover .icon-expand_more {
+.btn-secondary:hover .ico,
+.btn-secondary.hover .ico {
   border-left: 2px solid #fff !important;
 }
 
@@ -11808,15 +11821,18 @@ h2.title {
   flex: 1;
 }
 
-.btn-secondary.has-icon .icon-expand_more {
-  display: block;
-  padding: 5px 17px 0;
+.btn-secondary.has-icon .ico {
+  padding: 0 17px 0;
   order: 1;
   border-left: 2px solid #00AAEE;
   display: flex;
   align-items: center;
-  height: 31px;
-  font-size: rem-calc(12);
+  height: 38px;
+  font-size: 12px;
+}
+
+.btn-secondary.has-icon .ico.icon-expand_more:before {
+  margin-top: 5px;
 }
 
 .btn-secondary.has-icon.btn-large {
@@ -11862,7 +11878,7 @@ h2.title {
 }
 
 .btn-primary.inverse.has-icon .icon-ic-close {
-  font-size: rem-calc(12);
+  font-size: 12px;
 }
 
 .btn-primary.inverse-white {
@@ -11906,14 +11922,51 @@ h2.title {
   background-color: #00AAEE;
 }
 
+nav {
+  order: 1;
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1023px) {
+  nav {
+    flex: 0 0 auto;
+    order: 0;
+    margin-top: 7px;
+    width: auto;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: 0;
+}
+
+@media only screen and (min-width: 767px) {
+  .navigation {
+    display: block;
+  }
+}
+
 .navigation li {
   display: inline-block;
-  margin: 0 35px;
+}
+
+@media only screen and (min-width: 767px) {
+  .navigation li {
+    margin: 0 35px;
+  }
 }
 
 .navigation li a {
   font-size: 16px;
   color: #676767;
+}
+
+.navigation li a:hover {
+  text-decoration: none !important;
 }
 
 .heading {
@@ -11964,12 +12017,27 @@ h2.title {
 .featured .featured-box__item {
   padding: 30px;
   position: relative;
-  border-bottom: 0;
+  border-bottom: 1px solid #ccc;
+  transition: all 0.2s ease;
 }
 
-@media only screen and (min-width: 767px) {
+.featured .featured-box__item.background-blue {
+  background-color: #00AAEE;
+}
+
+.featured .featured-box__item.background-blue p,
+.featured .featured-box__item.background-blue h2 {
+  color: #fff;
+}
+
+.featured .featured-box__item.background-blue .c-btn {
+  background: #fff;
+  color: #00AAEE;
+}
+
+@media only screen and (min-width: 1023px) {
   .featured .featured-box__item {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 0;
   }
 }
 
@@ -11978,13 +12046,10 @@ h2.title {
   color: #3A3A3A;
 }
 
-.featured .featured-box__item .c-btn {
-  bottom: 30px;
-}
-
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 1281px) {
   .featured .featured-box__item .c-btn {
     position: absolute;
+    bottom: 30px;
   }
 }
 
@@ -12008,12 +12073,12 @@ h2.title {
   font-family: Telefonicaregular;
 }
 
-.featured .featured-box__item-blue {
+.featured .featured-box__item-active {
   background: #00AAEE;
 }
 
-.featured .featured-box__item-blue .bx--type-h1,
-.featured .featured-box__item-blue .bx--type-p {
+.featured .featured-box__item-active .bx--type-h1,
+.featured .featured-box__item-active .bx--type-p {
   color: #fff;
 }
 
@@ -12030,8 +12095,15 @@ h2.title {
 }
 
 .info {
-  padding-left: 90px;
-  padding-right: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media only screen and (min-width: 1023px) {
+  .info {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
 }
 
 .info-text {
@@ -12053,10 +12125,35 @@ h2.title {
 .info-banner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   background: #4C007D;
-  padding: 20px 30px 20px 70px;
+  padding: 20px;
   margin: 90px 0;
+}
+
+@media only screen and (min-width: 767px) {
+  .info-banner {
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 30px 20px 70px;
+  }
+}
+
+.info-banner__action {
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 767px) {
+  .info-banner__action {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .info-banner__text {
+    padding-right: 40px;
+  }
 }
 
 .info-banner .c-btn {
@@ -12075,13 +12172,19 @@ h2.title {
 }
 
 .description {
-  padding-left: 90px;
-  padding-right: 90px;
-  margin-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 30px;
+  min-height: 800px;
 }
 
-.description .content {
-  padding-bottom: 100vh;
+@media only screen and (min-width: 1023px) {
+  .description {
+    min-height: 700px;
+    padding-left: 90px;
+    padding-right: 90px;
+    margin-top: 150px;
+  }
 }
 
 .description .bx--type-xl {
@@ -12095,23 +12198,44 @@ h2.title {
   margin-bottom: 5px;
 }
 
-.description .description-text {
+.description .col-xs-12 + .col-xs-12 {
+  padding-left: 30px;
+}
+
+.description-text {
   font-family: Telefonicaregular;
   font-size: 18px;
   color: #3A3A3A;
   line-height: 24px;
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 
-.description .description-actions .title,
-.description .description-actions a {
+@media only screen and (min-width: 1023px) {
+  .description-text {
+    padding: 0;
+  }
+}
+
+.description-actions {
+  padding-left: 20px;
+}
+
+@media only screen and (min-width: 767px) {
+  .description-actions {
+    padding-left: 0;
+  }
+}
+
+.description-actions .title,
+.description-actions a {
   font-family: Telefonicaregular;
   font-size: 18px;
   color: #00AAEE;
   display: block;
 }
 
-.description .description-actions a {
+.description-actions a {
   color: #4C007D;
   margin-top: 3px;
 }
@@ -12127,13 +12251,27 @@ strong.blue-color {
 
 .info-icons__content {
   margin-top: 80px;
-  padding-left: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media only screen and (min-width: 767px) {
+  .info-icons__content {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
 }
 
 .info-icons__item {
   text-align: center;
   display: inline-block;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 767px) {
+  .info-icons__item {
+    margin-bottom: 80px;
+  }
 }
 
 .info-icons__title {
@@ -12155,8 +12293,15 @@ strong.blue-color {
 }
 
 .global-actions {
-  padding-left: 90px;
-  padding-right: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media only screen and (min-width: 767px) {
+  .global-actions {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
 }
 
 /* =============================================================================
@@ -12170,7 +12315,7 @@ strong.blue-color {
   width: 100%;
   position: relative;
   display: flex;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 6px solid #F1F1F2;
 }
 
 @media only screen and (min-width: 767px) {
@@ -12187,8 +12332,7 @@ strong.blue-color {
 }
 
 .lds-tab--section input[type="radio"][name="tabs"]:checked + .tab-label-content label {
-  color: #4A4A4A;
-  font-family: Telefonicabold;
+  color: #4A90E2;
 }
 
 .lds-tab--section input[type="radio"][name="tabs"]:checked + .tab-label-content .tab-content {
@@ -12213,7 +12357,7 @@ strong.blue-color {
 
 .lds-tab--section .tab-label {
   cursor: pointer;
-  color: #4A4A4A;
+  color: #86888C;
   background-color: #fff;
   box-sizing: border-box;
   display: inline-flex;
@@ -12221,17 +12365,20 @@ strong.blue-color {
   justify-content: center;
   text-align: center;
   transition: color 0.2s ease;
+  font-size: 26px;
+  font-family: Telefonicaregular;
   height: 56px;
   width: 100%;
 }
 
 .lds-tab--section .slide {
-  background: #00EEAA;
+  background: #00AAEE;
   width: calc(100% / 3);
-  height: 3px;
+  border-radius: 10px;
+  height: 6px;
   position: absolute;
   left: 0;
-  top: calc(100% - 2px);
+  top: calc(100% - 1px);
   transition: left 0.3s ease-out;
 }
 
@@ -12240,13 +12387,19 @@ strong.blue-color {
 }
 
 .lds-tab--section .tab-label-content .tab-content {
-  margin-top: 90px;
+  margin-top: 40px;
   position: absolute;
   top: 90px;
   left: 0;
   line-height: 130%;
   opacity: 0;
   transition: all 0.2s ease;
+}
+
+@media only screen and (min-width: 1023px) {
+  .lds-tab--section .tab-label-content .tab-content {
+    margin-top: 90px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -12258,43 +12411,39 @@ strong.blue-color {
 }
 
 .titleDemo {
-  font-family: TelefonicaExtraLight;
+  font-family: Telefonicaextralight;
   font-size: 48px;
   color: #00AAEE;
   line-height: 1em;
 }
 
 .subtitleDemo {
-  font-family: Telefonica;
+  font-family: Telefonicaregular;
   font-size: 24px;
   color: #3A3A3A;
 }
 
 .labelInput {
-  font-family: Telefonica;
+  font-family: Telefonicaregular;
   font-size: 14px;
-  color: #4A4A4A;
+  color: #9B9B9B;
+  margin-bottom: 10px;
 }
 
 #buttonSummit {
-  border: 2px solid #1AA992;
-  font-family: TelefonicaBold;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #1AA992;
-  background-color: transparent;
-  border-radius: 30px;
-  width: 166px;
-  text-align: center;
-  padding: 10px 0;
-  cursor: pointer;
-  transition: .2s;
-  display: block;
+  position: absolute;
+  bottom: 72px;
+  right: 50px;
 }
 
-#buttonSummit:hover {
-  color: #FFFFFF;
-  background-color: #1AA992;
+#buttonSummit .c-btn {
+  border-color: #1AA992;
+  color: #1AA992;
+}
+
+#buttonSummit .c-btn:hover {
+  background: #1AA992;
+  color: #fff;
 }
 
 #luca-logo {
@@ -12306,13 +12455,13 @@ strong.blue-color {
 }
 
 #close-icon {
-  padding: 15px 15px 0 15px;
+  padding: 15px 15px 0;
 }
 
 #phone {
   border: none;
   padding: 5px 0;
-  font-family: Telefonica;
+  font-family: Telefonicaregular;
   font-size: 18px;
   color: #999999;
   width: 240px;
@@ -12338,7 +12487,7 @@ input::placeholder {
   position: absolute;
   bottom: 0;
   background-color: #1AA992;
-  width: 0px;
+  width: 0;
   height: 4px;
 }
 
@@ -12347,8 +12496,12 @@ input::placeholder {
   top: 5px;
   right: 25px;
   background-color: #1AA992;
-  width: 0px;
+  width: 0;
   height: 4px;
+}
+
+#progressIco .icon-ic-close:before {
+  font-size: 12px;
 }
 
 #inputPhone {
@@ -12370,30 +12523,31 @@ input::placeholder {
 
 #resultText {
   margin-top: 10px;
-  font-family: Telefonica;
+  font-family: Telefonicaregular;
   font-size: 24px;
   text-align: center;
 }
 
 #resultDescription {
   padding-top: 10px;
-  font-family: Telefonica;
-  font-size: 18px;
+  font-family: Telefonicaregular;
+  font-size: 14px;
   display: none;
   width: 230px;
 }
 
-.modal-footer {
-  background-color: #F6F6F6;
-}
-
 .modal-footer svg {
-  fill: #fff;
+  fill: #000;
+  width: 95%;
 }
 
 .modal-content {
-  height: 450px !important;
+  height: 420px !important;
   width: 640px !important;
+}
+
+.modal-content .footer {
+  background: #F6F6F6;
 }
 
 .modal-dialog {
@@ -12403,7 +12557,7 @@ input::placeholder {
 }
 
 .modal-body {
-  padding: 0 40px 0 40px !important;
+  padding: 50px 40px 0 40px !important;
 }
 
 .modal-header {
@@ -12411,23 +12565,37 @@ input::placeholder {
   padding: 0;
 }
 
+.modal-header .close {
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  z-index: 99999;
+}
+
+.modal-header .close .icon-ic-close:hover {
+  cursor: pointer;
+}
+
+.modal-header .close .icon-ic-close:before {
+  font-size: 20px;
+}
+
 .modal-footer {
   border: 0;
-  padding: 0;
+  padding: 16px;
 }
 
 .separatorInput {
-  margin-top: 75px;
+  margin-top: 90px;
 }
 
 .separatorResult {
   margin-top: 20px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .separatorButton {
-  margin: auto;
-  margin-top: 88px;
+  margin: 88px auto auto;
 }
 
 .close {
@@ -12466,7 +12634,7 @@ input[type="number"] {
   }
 
   .separatorResult {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 40px;
   }
 }
@@ -12488,12 +12656,12 @@ input[type="number"] {
   }
 
   .separatorButton {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 40px;
   }
 
   .separatorResult {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 40px;
   }
 }
@@ -12701,7 +12869,7 @@ input[type="number"] {
   background: #3376BF;
   padding: 50px;
   color: #fff;
-  margin-top: 90px;
+  margin-top: 100px;
   border-top: 8px solid #B2C4D4;
 }
 
@@ -12741,16 +12909,29 @@ input[type="number"] {
   background: #4A90E2;
 }
 
-.footer .row {
+.footer .content {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.footer .content {
-  padding: 30px 0;
+@media only screen and (min-width: 1023px) {
+  .footer .content {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 
 .footer .content #logo-luca {
   fill: #fff;
+  margin: 20px 0;
+}
+
+@media only screen and (min-width: 1023px) {
+  .footer .content #logo-luca {
+    margin: 0;
+  }
 }
 
 .footer .content #logo-telefonica {
@@ -12761,13 +12942,26 @@ input[type="number"] {
   color: #fff;
   font-family: Telefonicaregular;
   font-size: 18px;
+  order: -1;
+}
+
+@media only screen and (min-width: 1023px) {
+  .footer .copy {
+    order: 0;
+  }
 }
 
 .top-bar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 18px 45px;
+  flex-wrap: wrap;
+  padding: 18px 25px 0;
+}
+
+@media only screen and (min-width: 1023px) {
+  .top-bar {
+    padding: 35px 0 15px;
+  }
 }
 
 .top-bar #logo-luca {
@@ -16047,6 +16241,405 @@ input[type="number"] {
   }
 }
 
+[data-icon]:before {
+  content: attr(data-icon);
+}
+
+[data-icon]:before,
+.icon-2-col-bg:before,
+.icon-4-col-bg:before,
+.icon-6-col-bg:before,
+.icon-8-col-bg:before,
+.icon-add:before,
+.icon-arrow_back:before,
+.icon-arrow_drop_down:before,
+.icon-arrow_drop_up:before,
+.icon-arrow_forward:before,
+.icon-check:before,
+.icon-chevron_left:before,
+.icon-chevron_right:before,
+.icon-close:before,
+.icon-expand_less:before,
+.icon-expand_more:before,
+.icon-favorite:before,
+.icon-fullscreen:before,
+.icon-fullscreen_exit:before,
+.icon-hamburguer:before,
+.icon-ic-ai_02:before,
+.icon-ic-alert:before,
+.icon-ic-arrow:before,
+.icon-ic-arrow-up:before,
+.icon-ic-back-arrow:before,
+.icon-ic-btn:before,
+.icon-ic-cart:before,
+.icon-ic-circle-arrow:before,
+.icon-ic-close:before,
+.icon-ic-copy:before,
+.icon-ic-desktop-callout:before,
+.icon-ic-desplegar:before,
+.icon-ic-double-arrow:before,
+.icon-ic-driving:before,
+.icon-ic-envelope:before,
+.icon-ic-fuel:before,
+.icon-ic-fullscreen:before,
+.icon-ic-graphics-blue:before,
+.icon-ic-graphics-vizrules-xs:before,
+.icon-ic-hand:before,
+.icon-ic-hotel:before,
+.icon-ic-info:before,
+.icon-ic-less:before,
+.icon-ic-local-hotel:before,
+.icon-ic-more:before,
+.icon-ic-password:before,
+.icon-ic-pdf:before,
+.icon-ic-pois:before,
+.icon-ic-question:before,
+.icon-ic-restaurants:before,
+.icon-ic-search:before,
+.icon-ic-select:before,
+.icon-ic-single-arrow:before,
+.icon-ic-sketch:before,
+.icon-ic-tablet-callout:before,
+.icon-ic-tooltip:before,
+.icon-ic-traffic:before,
+.icon-ic-typography:before,
+.icon-ic-user:before,
+.icon-ic-xlsx:before,
+.icon-ic-xml:before,
+.icon-layout-desktop:before,
+.icon-layout-grid02:before,
+.icon-layout-labtop:before,
+.icon-layout-mobile:before,
+.icon-layout-tablet:before,
+.icon-legend-example:before,
+.icon-logo-luca:before,
+.icon-menu:before,
+.icon-mobile:before,
+.icon-more:before,
+.icon-pattern:before,
+.icon-refresh:before,
+.icon-sort-down:before,
+.icon-sort-up:before,
+.icon-tablet:before,
+.icon-triangle:before {
+  display: inline-block;
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-2-col-bg:before {
+  content: "\F161";
+}
+
+.icon-4-col-bg:before {
+  content: "\F162";
+}
+
+.icon-6-col-bg:before {
+  content: "\F163";
+}
+
+.icon-8-col-bg:before {
+  content: "\F164";
+}
+
+.icon-add:before {
+  content: "\F1C5";
+}
+
+.icon-arrow_back:before {
+  content: "\F1C6";
+}
+
+.icon-arrow_drop_down:before {
+  content: "\F1C7";
+}
+
+.icon-arrow_drop_up:before {
+  content: "\F1C8";
+}
+
+.icon-arrow_forward:before {
+  content: "\F1C9";
+}
+
+.icon-check:before {
+  content: "\F1CA";
+}
+
+.icon-chevron_left:before {
+  content: "\F1CB";
+}
+
+.icon-chevron_right:before {
+  content: "\F1CC";
+}
+
+.icon-close:before {
+  content: "\F1CD";
+}
+
+.icon-expand_less:before {
+  content: "\F1CE";
+}
+
+.icon-expand_more:before {
+  content: "\F1CF";
+}
+
+.icon-favorite:before {
+  content: "\F1D0";
+}
+
+.icon-fullscreen:before {
+  content: "\F1D1";
+}
+
+.icon-fullscreen_exit:before {
+  content: "\F1D2";
+}
+
+.icon-hamburguer:before {
+  content: "\F1D3";
+}
+
+.icon-ic-ai_02:before {
+  content: "\F165";
+}
+
+.icon-ic-alert:before {
+  content: "\F1C4";
+}
+
+.icon-ic-arrow:before {
+  content: "\F166";
+}
+
+.icon-ic-arrow-up:before {
+  content: "\F167";
+}
+
+.icon-ic-back-arrow:before {
+  content: "\F168";
+}
+
+.icon-ic-btn:before {
+  content: "\F169";
+}
+
+.icon-ic-cart:before {
+  content: "\F16D";
+}
+
+.icon-ic-circle-arrow:before {
+  content: "\F171";
+}
+
+.icon-ic-close:before {
+  content: "\F172";
+}
+
+.icon-ic-copy:before {
+  content: "\F179";
+}
+
+.icon-ic-desktop-callout:before {
+  content: "\F17A";
+}
+
+.icon-ic-desplegar:before {
+  content: "\F17B";
+}
+
+.icon-ic-double-arrow:before {
+  content: "\F17C";
+}
+
+.icon-ic-driving:before {
+  content: "\F17F";
+}
+
+.icon-ic-envelope:before {
+  content: "\F180";
+}
+
+.icon-ic-fuel:before {
+  content: "\F181";
+}
+
+.icon-ic-fullscreen:before {
+  content: "\F182";
+}
+
+.icon-ic-graphics-blue:before {
+  content: "\F183";
+}
+
+.icon-ic-graphics-vizrules-xs:before {
+  content: "\F184";
+}
+
+.icon-ic-hand:before {
+  content: "\F18A";
+}
+
+.icon-ic-hotel:before {
+  content: "\F18B";
+}
+
+.icon-ic-info:before {
+  content: "\F18C";
+}
+
+.icon-ic-less:before {
+  content: "\F18D";
+}
+
+.icon-ic-local-hotel:before {
+  content: "\F18E";
+}
+
+.icon-ic-more:before {
+  content: "\F190";
+}
+
+.icon-ic-password:before {
+  content: "\F191";
+}
+
+.icon-ic-pdf:before {
+  content: "\F192";
+}
+
+.icon-ic-pois:before {
+  content: "\F193";
+}
+
+.icon-ic-question:before {
+  content: "\F194";
+}
+
+.icon-ic-restaurants:before {
+  content: "\F198";
+}
+
+.icon-ic-search:before {
+  content: "\F199";
+}
+
+.icon-ic-select:before {
+  content: "\F19A";
+}
+
+.icon-ic-single-arrow:before {
+  content: "\F19B";
+}
+
+.icon-ic-sketch:before {
+  content: "\F19C";
+}
+
+.icon-ic-tablet-callout:before {
+  content: "\F19E";
+}
+
+.icon-ic-tooltip:before {
+  content: "\F19F";
+}
+
+.icon-ic-traffic:before {
+  content: "\F1A0";
+}
+
+.icon-ic-typography:before {
+  content: "\F1A1";
+}
+
+.icon-ic-user:before {
+  content: "\F1A5";
+}
+
+.icon-ic-xlsx:before {
+  content: "\F1A7";
+}
+
+.icon-ic-xml:before {
+  content: "\F1A8";
+}
+
+.icon-layout-desktop:before {
+  content: "\F1A9";
+}
+
+.icon-layout-grid02:before {
+  content: "\F1AA";
+}
+
+.icon-layout-labtop:before {
+  content: "\F1AB";
+}
+
+.icon-layout-mobile:before {
+  content: "\F1AC";
+}
+
+.icon-layout-tablet:before {
+  content: "\F1AD";
+}
+
+.icon-legend-example:before {
+  content: "\F1AE";
+}
+
+.icon-logo-luca:before {
+  content: "\F1AF";
+}
+
+.icon-menu:before {
+  content: "\F1D4";
+}
+
+.icon-mobile:before {
+  content: "\F1B0";
+}
+
+.icon-more:before {
+  content: "\F1D5";
+}
+
+.icon-pattern:before {
+  content: "\F1B1";
+}
+
+.icon-refresh:before {
+  content: "\F1D6";
+}
+
+.icon-sort-down:before {
+  content: "\F1B4";
+}
+
+.icon-sort-up:before {
+  content: "\F1B5";
+}
+
+.icon-tablet:before {
+  content: "\F1B7";
+}
+
+.icon-triangle:before {
+  content: "\F1B9";
+}
+
 /* =============================================================================
    LISTS (elements/_lists.scss)
    ========================================================================== */
@@ -16119,7 +16712,11 @@ h3.title {
    ========================================================================== */
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
 }
 
 .bx--link.hover {

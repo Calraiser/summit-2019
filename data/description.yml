@@ -1,0 +1,26 @@
+items:
+
+  ## Verify
+  verify:
+    - title: 'Verify your customer’s mobile number instantly and securely'
+      note: 'Features'
+      text01: 'The <strong class="blue-color">LUCA Verify</strong> service allows service providers to verify a mobile number instantly and securely within the mobile browser or mobile app when on the carrier mobile data network.'
+      text02: 'Using technology built into the network, the service offers enhanced security for service providers and end users, with no need to trade off security for improved customer experience.'
+      text03: 'The LUCA Verify API allows service providers to passively match the end user MSISDN to the MSISDN being used in the associated SIM card and mobile device in real-time on the carrier mobile network.'
+      link: 'https://sandbox.smartdigits.io/apidocs/verify'
+
+ ## Match
+  match:
+    - title: 'Verify your customer’s data instantly and securely'
+      note: 'Features'
+      text01: 'The <strong class="blue-color">LUCA xMNO Match</strong> service allows service providers to match end user data bound to the end user MSISDN to verify their identity. End user data including first name, last name, address and date of birth can be matched. Insights for market segment of the MSISDN and lost or stolen status can also be requested.'
+      link: 'https://sandbox.smartdigits.io/apidocs/xmnomatch'
+
+  ## ATP
+  atp:
+    - title: 'Make better informed risk decisions when using mobile channels for one-time passwords'
+      note: 'Features'
+      text01: 'The <strong class="blue-color">LUCA ATP</strong>  service allows service providers to determine the timestamp of the last MSISDN/IMSI pairing change on the network and the unconditional call divert status of a MSISDN in real-time.'
+      text02: 'A change of MSISDN/IMSI pairing in the network is commonly known as a SIM Swap and allows subscribers to move their mobile number (MSISDN) legitimately from one SIM card to another, for example in the case of loss or damage to their existing SIM card or an upgrade to a new device with a different SIM card form factor. After a SIM Swap is actioned on the network the customer MSISDN will be associated to the new IMSI of the new SIM card.'
+      text03: 'A feature of the mobile network is to allow subscribers to permanently or temporarily divert their mobile phone number (MSISDN) to another phone number. This will be transparent to callers to the subscriber’s MSISDN. In the case of unconditional call diverts (the only type supported by this service), all calls to the subscriber MSISDN will be diverted to the provisioned number. Other types of call divert (e.g. conditional) can be setup on the network for the subscriber MSISDN (e.g. when phone out of coverage) but these are not supported by this service.'
+      link: 'https://sandbox.smartdigits.io/apidocs/simswap'

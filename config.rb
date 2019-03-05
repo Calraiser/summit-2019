@@ -8,6 +8,7 @@ set :css_dir,     'assets/stylesheets'
 set :fonts_dir,   'assets/fonts'
 set :images_dir,  'assets/images'
 set :js_dir,      'assets/javascripts'
+set :data_dir,    'data'
 
 activate :directory_indexes
 

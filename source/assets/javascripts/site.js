@@ -5,7 +5,8 @@ require('script-loader!bootstrap');
 
 $(document).ready(function() {
 
-  var nav = $('.navigation a');
+  var nav     = $('.navigation a, .featured .featured-box__item .actions .c-btn'),
+      featBtn = $('.featured .featured-box__item .actions .c-btn');
 
   nav.on('click', function(event) {
     var target = $(this.getAttribute('href'));
@@ -17,4 +18,10 @@ $(document).ready(function() {
         }, 1000);
       }
   });
+
+
+  featBtn.on('mouseenter', function(){
+    $('.featured .featured-box__item').removeClass('background-blue');
+    $(this).parents().addClass('background-blue');
+  })
 });

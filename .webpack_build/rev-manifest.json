@@ -1,6 +1,7 @@
 {
   "assets/fondo-poliedros.png": "./assets/fondo-poliedros-5d2a3d755b88e44bfd5dc72b7a87f455.png",
   "assets/fondo–poliedros2.png": "./assets/fondo–poliedros2-00bb551aad183f872964ea80c6ab6894.png",
-  "site.js": "site-fdf63b915868581b7daa.js",
-  "site.scss": "site-01aaab4458e01038a4b39fdc8829497c.css"
+  "assets/fontcustom_42b25de51cf2f52c9b0eee69434f5023.svg": "./assets/fontcustom_42b25de51cf2f52c9b0eee69434f5023-38052b4a63486eb52ea3dd5c88fee943.svg",
+  "site.js": "site-aa5ac6081c9b954eb385.js",
+  "site.scss": "site-cd602cbbd407b1402c8f76f34623b9b4.css"
 }

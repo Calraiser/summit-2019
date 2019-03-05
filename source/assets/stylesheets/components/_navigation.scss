@@ -1,11 +1,37 @@
+nav {
+  order: 1;
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+  @include media($tablet) {
+    flex: 0 0 auto;
+    order: 0;
+    margin-top: 7px;
+    width: auto;
+  }
+
+}
+
 .navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: 0;
+  @include media($mobile) {
+    display: block;
+
+  }
   li {
     display: inline-block;
-    margin: 0 35px;
+    @include media($mobile) {
+      margin: 0 35px;
+    }
     a {
       @extend %txt-links-positive;
       font-size: 16px;
       color: $grey04;
+      &:hover {
+        text-decoration: none !important;
+      }
     }
   }
 }

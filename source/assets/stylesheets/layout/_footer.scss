@@ -7,7 +7,7 @@
   background: $blue03;
   padding: 50px;
   color: $white;
-  margin-top: 90px;
+  margin-top: 100px;
   border-top: 8px solid #B2C4D4;
   .text-normal,
   .text-big,
@@ -40,13 +40,22 @@
 
 .footer {
   background: $blue02;
-  .row {
-    align-items: center;
-  }
   .content {
     padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media($tablet) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
     #logo-luca {
       fill: $white;
+      margin: 20px 0;
+      @include media($tablet) {
+        margin: 0;
+      }
     }
     #logo-telefonica {
       fill: #fff;
@@ -56,5 +65,9 @@
     color: $white;
     font-family: Telefonicaregular;
     font-size: 18px;
+    order: -1;
+    @include media($tablet) {
+      order: 0;
+    }
   }
 }

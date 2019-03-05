@@ -27,9 +27,8 @@ $button-colors: (
   position: relative;
   display: inline-block;
   border-radius: 42px;
-	padding: .540rem .75rem;
-  @include padding(null 20px);
-	font-size: rem-calc(14);
+  @include padding(8px 20px 8px);
+	font-size: 14px;
 	line-height: 1.5;
 
   overflow: hidden;
@@ -102,7 +101,7 @@ $button-colors: (
 		justify-content: space-between;
 		align-items: center;
 		.icon-check {
-			font-size: rem-calc(17);
+			font-size: 17px;
 		}
 		&.btn-small:not(.inverse) {
 			width: 87px;
@@ -131,7 +130,7 @@ $button-colors: (
   border: 2px solid $blue;
   background: $white;
 	&.disabled {
-		.icon-expand_more {
+		.ico {
 			border-left: 2px solid $grey !important;
 		}
 	}
@@ -139,7 +138,7 @@ $button-colors: (
     color: $white;
     background: $blue;
 		border: 2px solid $white;
-		.icon-expand_more {
+		.ico {
 			border-left: 2px solid $white !important;
 		}
   }
@@ -156,15 +155,19 @@ $button-colors: (
       flex: 1;
 
     }
-    .icon-expand_more {
-      display: block;
-      padding: 5px 17px 0;
+    .ico {
+      padding: 0 17px 0;
       order: 1;
       border-left: 2px solid $blue;
 			display: flex;
 			align-items: center;
-			height: 31px;
-			font-size: rem-calc(12);
+			height: 38px;
+			font-size: 12px;
+			&.icon-expand_more {
+				&:before {
+					margin-top: 5px;
+				}
+			}
     }
 
 		&.btn-large {
@@ -207,7 +210,7 @@ $button-colors: (
 		justify-content: space-between;
 		align-items: center;
 		.icon-ic-close {
-			font-size: rem-calc(12);
+			font-size: 12px;
 		}
   }
 }

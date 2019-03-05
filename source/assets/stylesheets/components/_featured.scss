@@ -16,9 +16,22 @@
       &__item {
         padding: 30px;
         position: relative;
-        border-bottom: 0;
-        @include media($mobile) {
-          border-bottom: 1px solid #ccc;;
+        border-bottom: 1px solid #ccc;
+        transition: $transition-slow;
+        &.background-blue {
+          background-color: $blue;
+          p,
+          h2 {
+            color: $white;
+          }
+
+          .c-btn {
+            background: $white;
+            color: $blue;
+          }
+        }
+        @include media($tablet) {
+          border-bottom: 0;
         }
         .bx--type-p {
           margin-bottom: 15px;
@@ -26,9 +39,9 @@
           color: $grey09;
         }
         .c-btn {
-          bottom: 30px;
-          @include media($mobile) {
+          @include media($medium-desktop) {
             position: absolute;
+            bottom: 30px;
           }
         }
         .note {
@@ -47,7 +60,7 @@
           margin-bottom: 30px;
           font-family: Telefonicaregular;
         }
-        &-blue {
+        &-active {
           background: $blue;
 
           .bx--type-h1,
@@ -61,6 +74,7 @@
             margin: 2px 0;
             a {
               color: $blue;
+
             }
           }
         }

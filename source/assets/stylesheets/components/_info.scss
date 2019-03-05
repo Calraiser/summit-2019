@@ -1,6 +1,10 @@
 .info {
-  padding-left: 90px;
-  padding-right: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include media($tablet) {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
   &-text {
     font-family: Telefonicaregular;
     font-size: 28px;
@@ -19,10 +23,28 @@
 .info-banner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   background: $purple2;
-  padding: 20px 30px 20px 70px;
+  padding: 20px;
   margin: 90px 0;
+  @include media($mobile) {
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 30px 20px 70px;
+  }
+  &__action {
+    margin-top: 30px;
+    @include media($mobile) {
+      margin-top: 0;
+    }
+  }
+  &__text {
+    @include media($mobile) {
+      padding-right: 40px;
+    }
+
+  }
   .c-btn {
     background: $white;
   }

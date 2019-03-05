@@ -1,10 +1,15 @@
 .description {
-  padding-left: 90px;
-  padding-right: 90px;
-  margin-top: 50px;
-  .content {
-    padding-bottom: 100vh;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 30px;
+  min-height: 800px;
+  @include media($tablet) {
+    min-height: 700px;
+    padding-left: 90px;
+    padding-right: 90px;
+    margin-top: 150px;
   }
+
   .bx--type-xl {
     margin-bottom: 50px;
   }
@@ -14,14 +19,28 @@
     color: $blue;
     margin-bottom: 5px;
   }
-  .description-text {
+  .col-xs-12 + .col-xs-12  {
+    padding-left: 30px;
+  }
+  &-text {
     font-family: Telefonicaregular;
     font-size: 18px;
     color: $grey09;
     line-height: 24px;
     margin-bottom: 20px;
+    padding: 0 20px;
+    @include media($tablet) {
+      padding: 0;
+    }
   }
-  .description-actions {
+  &-actions {
+    padding-left: 20px;
+    @include media($mobile) {
+      padding-left: 0;
+
+    }
+  }
+  &-actions {
     .title,
     a {
       font-family: Telefonicaregular;
@@ -39,7 +58,7 @@
 
 strong {
   font-family: Telefonicabold;
-  &.blue-color{
+  &.blue-color {
     color: $blue;
     font-family: Telefonicaregular;
   }
