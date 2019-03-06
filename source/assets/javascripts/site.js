@@ -1,7 +1,6 @@
-import './components/fakeDemo.js'
-
 require('script-loader!jquery');
 require('script-loader!bootstrap');
+
 
 $(document).ready(function() {
 
@@ -18,6 +17,15 @@ $(document).ready(function() {
         }, 1000);
       }
   });
+
+
+  $('.tab-content').each(function() {
+    $(this).css('height', $(this).height());
+     $(window).resize(function() {
+        $(this).parent().css('height', $(this).outerHeight());
+      });
+  })
+
 
 
   featBtn.on('mouseenter', function(){

@@ -1,8 +1,11 @@
 .info-icons {
+  margin-top: 20px;
   &__content {
     margin-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
     @include media($mobile) {
       padding-left: 90px;
       padding-right: 90px;
@@ -38,10 +41,19 @@
 
 //// REVIEW: Todo
 .global-actions {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-bottom: 100px;
   @include media($mobile) {
     padding-left: 90px;
     padding-right: 90px;
+  }
+  .c-btn {
+    margin-bottom: 10px;
+    width: 100%;
+    @include media($mobile) {
+      margin-bottom: 0;
+      width: 190px;
+    }
   }
 }

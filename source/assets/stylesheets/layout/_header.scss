@@ -2,8 +2,11 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 18px 25px 0;
-  @include media($tablet) {
+  padding: 18px 20px 0;
+  @include media($small-desktop) {
+    padding: 35px 25px 15px;
+  }
+  @include media($large-desktop) {
     padding: 35px 0 15px;
   }
   #logo-luca {

@@ -1,22 +1,46 @@
 .featured {
-  background-image: url("assets/images/fondo–poliedros2.png");
+  background-image: url("/assets/images/fondo–poliedros2.png");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 40px;
+  padding: 32px;
   margin-top: 70px;
+  @include media($mobile) {
+    padding: 40px;
+  }
 
   .featured-box {
     display: flex;
     background: $white;
+    box-shadow: 0 0 4px 0 $grey07;
 
     .featured-box__item +
     .featured-box__item {
-      border-left: 1px solid $grey07;
+      @include media($medium-desktop) {
+        border-left: 1px solid $grey07;
+        border-right: 0;
+      }
     }
       &__item {
+        border-bottom: 0;
+        border-right: 0;
+        &:nth-child(2n + 1) {
+
+          @include media($mobile) {
+            border-right: 1px solid $grey07;
+          }
+          @include media($medium-desktop) {
+            border-right: 0;
+            border-top: 0;
+          }
+        }
+        &:nth-child(-n + 2) {
+          border-bottom: 1px solid $grey07;
+          @include media($medium-desktop) {
+            border-bottom: 0;
+          }
+        }
         padding: 30px;
         position: relative;
-        border-bottom: 1px solid #ccc;
         transition: $transition-slow;
         &.background-blue {
           background-color: $blue;
@@ -29,9 +53,6 @@
             background: $white;
             color: $blue;
           }
-        }
-        @include media($tablet) {
-          border-bottom: 0;
         }
         .bx--type-p {
           margin-bottom: 15px;
@@ -49,6 +70,8 @@
           font-size: 16px;
           font-family: Telefonicabold;
           color: $grey10;
+          text-overflow: ellipsis;
+          overflow: hidden;
           a {
             color: $blue01;
           }

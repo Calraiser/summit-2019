@@ -39,7 +39,7 @@ $num-of-tabs: 3;
           color: $blue02;
         }
         .tab-content {
-          opacity: 1;
+          display: block;
         }
       }
     }
@@ -62,9 +62,13 @@ $num-of-tabs: 3;
     justify-content: center;
     text-align: center;
     transition: color 0.2s ease;
-    font-size: 26px;
+    font-size: 18px;
     font-family: Telefonicaregular;
+    line-height: 28px;
     @include size(100%, 56px);
+    @include media($mobile) {
+      font-size: 26px;
+    }
   }
   .slide {
     background: $blue;
@@ -83,7 +87,7 @@ $num-of-tabs: 3;
       margin-top: 40px;
       @include position(absolute, 90px null null 0);
       line-height: 130%;
-      opacity: 0;
+      display: none;
       transition: $transition-slow;
       @include media($tablet) {
         margin-top: 90px;

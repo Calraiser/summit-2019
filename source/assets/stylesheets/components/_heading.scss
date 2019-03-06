@@ -1,12 +1,16 @@
 .heading {
-  background-image: url('assets/images/fondo-poliedros.png');
+  background-image: url('/assets/images/fondo-poliedros.png');
   background-size: cover;
   padding-top: 90px;
   padding-bottom: 90px;
   margin-bottom: 85px;
   &-title {
-    padding-left: 55px;
-    padding-right: 55px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include media($mobile) {
+      padding-left: 55px;
+      padding-right: 55px;
+    }
   }
 
   .bx--type-xl {
