@@ -2,7 +2,7 @@ items:
 
   ## Verify
   verify:
-    - title: 'Verify your customer’s mobile number instantly and securely'
+    - title: 'Verify your customer’s mobile number instantly and securely'
       note: 'Features'
       text01: 'The <strong class="blue-color">LUCA Verify</strong> service allows service providers to verify a mobile number instantly and securely within the mobile browser or mobile app when on the carrier mobile data network.'
       text02: 'Using technology built into the network, the service offers enhanced security for service providers and end users, with no need to trade off security for improved customer experience.'

@@ -90,7 +90,7 @@
   function state_maybe() {
       document.getElementById('progressFront').style.backgroundColor = "#F5A623";
       document.getElementById('phone').style.color = "#F5A623";
-      document.getElementById('progressIco').innerHTML = "<i class='material-icons'>remove_red_eye</i>";
+      document.getElementById('progressIco').innerHTML = "<i class='ico icon-eye'></i>";
       document.getElementById('progressIco').style.color = "#F5A623";
       document.getElementById('resultIcon').src = "assets/images/fake-demo/demo-maybe.svg";
       document.getElementById('resultBackground').style.backgroundColor = "#F5A623";
@@ -130,15 +130,16 @@
         </a>
       </div>
       <div class="modal-body">
-        <div class="container">
 
           <div class="row">
-            <div class="col-12">
+            <div class="col-xs-12">
               <div class="titleDemo">SIM Swap</div>
               <div class="subtitleDemo">ATP – demo</div>
             </div>
+          </div>
 
-            <div class="col-xs-3">
+          <div class="row between-xs middle-xs modal-inner">
+            <div class="col-xs-12 col-sm-4">
               <div class="separatorInput">
                 <div class="labelInput">MSISDN</div>
                 <div id="inputPhone">
@@ -151,7 +152,7 @@
               </div>
             </div>
 
-            <div class="col-xs-4">
+            <div class="col-xs-12 col-sm-4">
               <div class="separatorButton" id="buttonSummit">
                 <div onclick="launch()" class="c-btn btn-secondary btn-medium">Summit</div>
               </div>
@@ -162,7 +163,6 @@
               </div>
             </div>
           </div>
-        </div>
 
       </div>
 

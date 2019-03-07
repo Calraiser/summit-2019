@@ -7,13 +7,14 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "LUCA Summit" %></title>
+    <title><%= "Smart Digits" %></title>
 
     <%= stylesheet_link_tag webpack_asset_path "site.scss" %>
+    <%= favicon_tag 'favicon-32x32.png' %>
   </head>
 
   <body class="<%= page_classes %>">
-
+    <%= partial "components/fake_demo" %>
     <div class="main">
       <%= partial "elements/header" %>
       <%= yield %>

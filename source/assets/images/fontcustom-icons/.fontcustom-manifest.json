@@ -1,0 +1,273 @@
+{
+  "checksum": {
+    "previous": "42b25de51cf2f52c9b0eee69434f50233a87ad42a4e94fbcda2be782f3af93c0",
+    "current": "4a72c5a854369e3b3d219ba875f3ce0d3296be723d417df9ec34d87ad7def8ef"
+  },
+  "fonts": [
+
+  ],
+  "glyphs": {
+    "2-col-bg": {
+      "source": "./2-col-bg.svg",
+      "codepoint": 61793
+    },
+    "4-col-bg": {
+      "source": "./4-col-bg.svg",
+      "codepoint": 61794
+    },
+    "6-col-bg": {
+      "source": "./6-col-bg.svg",
+      "codepoint": 61795
+    },
+    "8-col-bg": {
+      "source": "./8-col-bg.svg",
+      "codepoint": 61796
+    },
+    "ic-ai_02": {
+      "source": "./ic-ai_02.svg",
+      "codepoint": 61797
+    },
+    "ic-arrow": {
+      "source": "./ic-arrow.svg",
+      "codepoint": 61798
+    },
+    "ic-arrow-up": {
+      "source": "./ic-arrow-up.svg",
+      "codepoint": 61799
+    },
+    "ic-back-arrow": {
+      "source": "./ic-back-arrow.svg",
+      "codepoint": 61800
+    },
+    "ic-btn": {
+      "source": "./ic-btn.svg",
+      "codepoint": 61801
+    },
+    "ic-cart": {
+      "source": "./ic-cart.svg",
+      "codepoint": 61805
+    },
+    "ic-circle-arrow": {
+      "source": "./ic-circle-arrow.svg",
+      "codepoint": 61809
+    },
+    "ic-close": {
+      "source": "./ic-close.svg",
+      "codepoint": 61810
+    },
+    "ic-copy": {
+      "source": "./ic-copy.svg",
+      "codepoint": 61817
+    },
+    "ic-desktop-callout": {
+      "source": "./ic-desktop-callout.svg",
+      "codepoint": 61818
+    },
+    "ic-desplegar": {
+      "source": "./ic-desplegar.svg",
+      "codepoint": 61819
+    },
+    "ic-double-arrow": {
+      "source": "./ic-double-arrow.svg",
+      "codepoint": 61820
+    },
+    "ic-driving": {
+      "source": "./ic-driving.svg",
+      "codepoint": 61823
+    },
+    "ic-envelope": {
+      "source": "./ic-envelope.svg",
+      "codepoint": 61824
+    },
+    "ic-fuel": {
+      "source": "./ic-fuel.svg",
+      "codepoint": 61825
+    },
+    "ic-fullscreen": {
+      "source": "./ic-fullscreen.svg",
+      "codepoint": 61826
+    },
+    "ic-graphics-blue": {
+      "source": "./ic-graphics-blue.svg",
+      "codepoint": 61827
+    },
+    "ic-graphics-vizrules-xs": {
+      "source": "./ic-graphics-vizrules-xs.svg",
+      "codepoint": 61828
+    },
+    "ic-hand": {
+      "source": "./ic-hand.svg",
+      "codepoint": 61834
+    },
+    "ic-hotel": {
+      "source": "./ic-hotel.svg",
+      "codepoint": 61835
+    },
+    "ic-info": {
+      "source": "./ic-info.svg",
+      "codepoint": 61836
+    },
+    "ic-less": {
+      "source": "./ic-less.svg",
+      "codepoint": 61837
+    },
+    "ic-local-hotel": {
+      "source": "./ic-local-hotel.svg",
+      "codepoint": 61838
+    },
+    "ic-more": {
+      "source": "./ic-more.svg",
+      "codepoint": 61840
+    },
+    "ic-password": {
+      "source": "./ic-password.svg",
+      "codepoint": 61841
+    },
+    "ic-pdf": {
+      "source": "./ic-pdf.svg",
+      "codepoint": 61842
+    },
+    "ic-pois": {
+      "source": "./ic-pois.svg",
+      "codepoint": 61843
+    },
+    "ic-question": {
+      "source": "./ic-question.svg",
+      "codepoint": 61844
+    },
+    "ic-restaurants": {
+      "source": "./ic-restaurants.svg",
+      "codepoint": 61848
+    },
+    "ic-search": {
+      "source": "./ic-search.svg",
+      "codepoint": 61849
+    },
+    "ic-select": {
+      "source": "./ic-select.svg",
+      "codepoint": 61850
+    },
+    "ic-single-arrow": {
+      "source": "./ic-single-arrow.svg",
+      "codepoint": 61851
+    },
+    "ic-sketch": {
+      "source": "./ic-sketch.svg",
+      "codepoint": 61852
+    },
+    "ic-tablet-callout": {
+      "source": "./ic-tablet-callout.svg",
+      "codepoint": 61854
+    },
+    "ic-tooltip": {
+      "source": "./ic-tooltip.svg",
+      "codepoint": 61855
+    },
+    "ic-traffic": {
+      "source": "./ic-traffic.svg",
+      "codepoint": 61856
+    },
+    "ic-typography": {
+      "source": "./ic-typography.svg",
+      "codepoint": 61857
+    },
+    "ic-user": {
+      "source": "./ic-user.svg",
+      "codepoint": 61861
+    },
+    "ic-xlsx": {
+      "source": "./ic-xlsx.svg",
+      "codepoint": 61863
+    },
+    "ic-xml": {
+      "source": "./ic-xml.svg",
+      "codepoint": 61864
+    },
+    "layout-desktop": {
+      "source": "./layout-desktop.svg",
+      "codepoint": 61865
+    },
+    "layout-grid02": {
+      "source": "./layout-grid02.svg",
+      "codepoint": 61866
+    },
+    "layout-labtop": {
+      "source": "./layout-labtop.svg",
+      "codepoint": 61867
+    },
+    "layout-mobile": {
+      "source": "./layout-mobile.svg",
+      "codepoint": 61868
+    },
+    "layout-tablet": {
+      "source": "./layout-tablet.svg",
+      "codepoint": 61869
+    },
+    "legend-example": {
+      "source": "./legend-example.svg",
+      "codepoint": 61870
+    },
+    "logo-luca": {
+      "source": "./logo-luca.svg",
+      "codepoint": 61871
+    },
+    "mobile": {
+      "source": "./mobile.svg",
+      "codepoint": 61872
+    },
+    "pattern": {
+      "source": "./pattern.svg",
+      "codepoint": 61873
+    },
+    "sort-down": {
+      "source": "./sort-down.svg",
+      "codepoint": 61876
+    },
+    "sort-up": {
+      "source": "./sort-up.svg",
+      "codepoint": 61877
+    },
+    "tablet": {
+      "source": "./tablet.svg",
+      "codepoint": 61879
+    },
+    "triangle": {
+      "source": "./triangle.svg",
+      "codepoint": 61881
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "copyright": "",
+    "css3": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "fontcustom",
+    "force": false,
+    "input": {
+      "templates": ".",
+      "vectors": "."
+    },
+    "no_hash": false,
+    "output": {
+      "css": "fontcustom",
+      "fonts": "fontcustom",
+      "preview": "fontcustom"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css",
+      "preview"
+    ]
+  },
+  "templates": [
+    "fontcustom/fontcustom.css",
+    "fontcustom/fontcustom-preview.html"
+  ]
+}

@@ -12,37 +12,41 @@ title: LUCA Summit
 
 <section class="description">
   <div class="content">
-  <div class="lds-tab--section"><input checked="checked" id="atp" name="tabs" type="radio">
+  <div class="lds-tab--section">
+    <input checked="checked" id="atp" name="tabs" type="radio">
     <div class="tab-label-content" id="atp">
       <label class="bx--type-p tab-label" for="atp">ATP – Account Takeover</label>
-      <div class="tab-content">
+      <div class="tab-content atp">
         <%=  partial :"components/description", :locals => { :item => data.description.items.atp } %>
+        <div class="info-icons">
+          <%= partial "components/info_icons" %>
+        </div>
+        <%=  partial :"components/global_actions", :locals => { :link => 'atp-productsheet-en.pdf' } %>
       </div>
     </div>
     <input id="match" name="tabs" type="radio">
     <div class="tab-label-content" id="match">
       <label class="bx--type-p tab-label" for="match">MATCH</label>
-      <div class="tab-content">
+      <div class="tab-content match">
         <%=  partial :"components/description", :locals => { :item => data.description.items.match } %>
+        <div class="info-icons">
+          <%= partial "components/info_icons" %>
+        </div>
+        <%=  partial :"components/global_actions", :locals => { :link => 'match-productsheet-en.pdf' } %>
       </div>
     </div>
     <input id="verify" name="tabs" type="radio">
     <div class="tab-label-content" id="verify">
       <label class="bx--type-p tab-label" for="verify">VERIFY</label>
-      <div class="tab-content">
+      <div class="tab-content verify">
         <%=  partial :"components/description", :locals => { :item => data.description.items.verify } %>
+        <div class="info-icons">
+          <%= partial "components/info_icons" %>
+        </div>
+        <%=  partial :"components/global_actions", :locals => { :link => 'verify-productsheet-en.pdf', :demoLink => true } %>
       </div>
     </div>
     <div class="slide"></div>
   </div>
 </div>
 </section>
-
-<div class="info-icons">
-  <%= partial "components/info_icons" %>
-</div>
-
-
-
-
-<%= partial "components/fake_demo" %>

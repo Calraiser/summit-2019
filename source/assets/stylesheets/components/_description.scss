@@ -57,6 +57,12 @@
     a {
       color: $purple2;
       margin-top: 3px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 300px;
+      @include media($mobile) {
+        max-width: 100%;
+      }
     }
   }
 }

@@ -5,7 +5,8 @@
 /.tmp/dist
 **/.DS_Store
 /log
-/node_modules
+node_modules
 /npm-debug.log
 .ruby-version
 .ruby-gemset
+.webpack_build

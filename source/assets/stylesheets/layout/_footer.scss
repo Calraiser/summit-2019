@@ -40,6 +40,14 @@
     text-decoration: underline;
     font-family: Telefonicaregular;
     font-size: 18px;
+    @extend %txt-links-positive;
+    &:before {
+      background: $white;
+    }
+    &:hover {
+      color: $white;
+
+    }
   }
 }
 
