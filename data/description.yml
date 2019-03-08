@@ -8,6 +8,20 @@ items:
       text02: 'Using technology built into the network, the service offers enhanced security for service providers and end users, with no need to trade off security for improved customer experience.'
       text03: 'The LUCA Verify API allows service providers to passively match the end user MSISDN to the MSISDN being used in the associated SIM card and mobile device in real-time on the carrier mobile network.'
       link: 'https://sandbox.smartdigits.io/apidocs/verify'
+      icons:
+        - icon: '/assets/images/arrow.png'
+          title: 'Fast authentication'
+        - icon: '/assets/images/platform.png'
+          title: 'Multi platform'
+        - icon: '/assets/images/latency.png'
+          title: 'Low latency'
+        - icon: '/assets/images/check.png'
+          title: 'High availability'
+        - icon: '/assets/images/integration.png'
+          title: 'Simple integration'
+        - icon: '/assets/images/lock.png'
+          title: 'Secure'
+
 
  ## Match
   match:
@@ -15,6 +29,20 @@ items:
       note: 'Features'
       text01: 'The <strong class="blue-color">LUCA xMNO Match</strong> service allows service providers to match end user data bound to the end user MSISDN to verify their identity. End user data including first name, last name, address and date of birth can be matched. Insights for market segment of the MSISDN and lost or stolen status can also be requested.'
       link: 'https://sandbox.smartdigits.io/apidocs/xmnomatch'
+      icons:
+        - icon: '/assets/images/user_verify.png'
+          title: 'Identify verification'
+        - icon: '/assets/images/improve.png'
+          title: 'Improve registration rates'
+        - icon: '/assets/images/latency.png'
+          title: 'Low latency'
+        - icon: '/assets/images/check.png'
+          title: 'High availability'
+        - icon: '/assets/images/integration.png'
+          title: 'Simple integration'
+        - icon: '/assets/images/lock.png'
+          title: 'Secure'
+
 
   ## ATP
   atp:
@@ -24,3 +52,17 @@ items:
       text02: 'A change of MSISDN/IMSI pairing in the network is commonly known as a SIM Swap and allows subscribers to move their mobile number (MSISDN) legitimately from one SIM card to another, for example in the case of loss or damage to their existing SIM card or an upgrade to a new device with a different SIM card form factor. After a SIM Swap is actioned on the network the customer MSISDN will be associated to the new IMSI of the new SIM card.'
       text03: 'A feature of the mobile network is to allow subscribers to permanently or temporarily divert their mobile phone number (MSISDN) to another phone number. This will be transparent to callers to the subscriber’s MSISDN. In the case of unconditional call diverts (the only type supported by this service), all calls to the subscriber MSISDN will be diverted to the provisioned number. Other types of call divert (e.g. conditional) can be setup on the network for the subscriber MSISDN (e.g. when phone out of coverage) but these are not supported by this service.'
       link: 'https://sandbox.smartdigits.io/apidocs/simswap'
+      link02: 'https://sandbox.smartdigits.io/apidocs/calldivert'
+      icons:
+        - icon: '/assets/images/clock.png'
+          title: 'Real-time insight'
+        - icon: '/assets/images/sms.png'
+          title: 'Secures SMS OTPs'
+        - icon: '/assets/images/latency.png'
+          title: 'Low latency'
+        - icon: '/assets/images/check.png'
+          title: 'High availability'
+        - icon: '/assets/images/integration.png'
+          title: 'Simple integration'
+        - icon: '/assets/images/lock.png'
+          title: 'Secure'

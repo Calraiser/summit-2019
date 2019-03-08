@@ -17,33 +17,38 @@ title: LUCA Summit
     <div class="tab-label-content" id="atp">
       <label class="bx--type-p tab-label" for="atp">ATP – Account Takeover</label>
       <div class="tab-content atp">
-        <%=  partial :"components/description", :locals => { :item => data.description.items.atp } %>
-        <div class="info-icons">
-          <%= partial "components/info_icons" %>
-        </div>
-        <%=  partial :"components/global_actions", :locals => { :link => 'atp-productsheet-en.pdf' } %>
+        <%=  partial :"components/description", :locals => {
+          :item => data.description.items.atp,
+          :link02 => true
+        } %>
+        <%=  partial :"components/global_actions", :locals => {
+          :link => 'atp-productsheet-en.pdf',
+           :demoLink => true
+        } %>
       </div>
     </div>
     <input id="match" name="tabs" type="radio">
     <div class="tab-label-content" id="match">
       <label class="bx--type-p tab-label" for="match">MATCH</label>
       <div class="tab-content match">
-        <%=  partial :"components/description", :locals => { :item => data.description.items.match } %>
-        <div class="info-icons">
-          <%= partial "components/info_icons" %>
-        </div>
-        <%=  partial :"components/global_actions", :locals => { :link => 'match-productsheet-en.pdf' } %>
+        <%=  partial :"components/description", :locals => {
+          :item => data.description.items.match
+        } %>
+        <%=  partial :"components/global_actions", :locals => {
+          :link => 'match-productsheet-en.pdf'
+        } %>
       </div>
     </div>
     <input id="verify" name="tabs" type="radio">
     <div class="tab-label-content" id="verify">
       <label class="bx--type-p tab-label" for="verify">VERIFY</label>
       <div class="tab-content verify">
-        <%=  partial :"components/description", :locals => { :item => data.description.items.verify } %>
-        <div class="info-icons">
-          <%= partial "components/info_icons" %>
-        </div>
-        <%=  partial :"components/global_actions", :locals => { :link => 'verify-productsheet-en.pdf', :demoLink => true } %>
+        <%=  partial :"components/description", :locals => {
+          :item => data.description.items.verify
+        } %>
+        <%=  partial :"components/global_actions", :locals => {
+          :link => 'verify-productsheet-en.pdf'
+        } %>
       </div>
     </div>
     <div class="slide"></div>
