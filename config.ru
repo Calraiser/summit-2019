@@ -1,43 +1,16 @@
-#!/usr/bin/env rackup
-
-# This rackup file is used to test the static website.
-# Usage:
-#   I18N=fr rackup
-#   I18N ./config.ru
-
-require 'rack'
-require 'rack/contrib/try_static'
-
-lang = if ENV['I18N'] then ENV['I18N'].to_sym else :es end
-
-# A rack module to disable caching
-class NoCache
-  def initialize(app, options)
-    @app = app
-  end
-  def call(env)
-    res = @app.call(env)
-    res[1]['Cache-Control'] = 'no-cache, no-store, must-revalidate'
-    res[1]['Expires'] = '0'
-    res
-  end
+use Rack::Auth::Basic, "Restricted Area" do |username, password|
+  [username, password] == [ENV.fetch("USERNAME", "admin"), ENV.fetch("PASSWORD", "admin")]
 end
 
-use NoCache, {}
+use Rack::Static, :urls => [""], :root => './build', :index => 'index.html'
 
-# Try a localized file (in /$lang/):
-use Rack::TryStatic,
-    :root => "build/#{lang}",
-    :urls => %w[/],
-    :try => [ " index.html" ]
-
-# Try a shared file (in /):
-use Rack::TryStatic,
-    :root => "build/",
-    :urls => %w[/],
-    :try => [ "index.html" ]
-
-# Otherwise 404:
-run Proc.new { |env|
-  ['404', {'Content-Type' => 'text/html'}, ['Not found.\n']]
+run lambda { |env|
+  [
+    200,
+    {
+      'Content-Type'  => 'text/html',
+      'Cache-Control' => 'public, max-age=0'
+    },
+    File.open('index.html', File::RDONLY)
+  ]
 }
