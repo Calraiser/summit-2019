@@ -11,6 +11,7 @@ set :js_dir,      'assets/javascripts'
 set :data_dir,    'data'
 
 activate :directory_indexes
+activate :i18n, mount_at_root: :en, langs: [:en, :es]
 
 configure :build do
   activate :gzip

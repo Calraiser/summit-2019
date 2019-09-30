@@ -25,7 +25,7 @@ items:
 
  ## Match
   match:
-    - title: 'Verify your customer’s data instantly and securely'
+    - title: 'Match'
       note: 'Features'
       text01: 'The <strong class="blue-color">LUCA xMNO Match</strong> service allows service providers to match end user data bound to the end user MSISDN to verify their identity. End user data including first name, last name, address and date of birth can be matched. Insights for market segment of the MSISDN and lost or stolen status can also be requested.'
       link: 'https://sandbox.smartdigits.io/apidocs/xmnomatch'

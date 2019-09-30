@@ -2,6 +2,9 @@
   var phone = "";
   var resultShowed = false;
 
+
+
+
   function getState() {
       var result = 0;
       var resultArray = ['STATE_OK', 'STATE_MAYBE', 'STATE_HACKED'];
@@ -19,7 +22,6 @@
       document.getElementById('inputPhone').removeAttribute("style");
       document.getElementById('result').removeAttribute("style");
       document.getElementById('resultDescription').removeAttribute("style");
-      document.getElementById('progressIco').innerHTML = "";
       document.getElementById('phone').removeAttribute("style");
       document.getElementById('progressIco').removeAttribute("style");
       document.getElementById('progressBack').removeAttribute("style");
@@ -44,7 +46,6 @@
       document.getElementById('progressFront').removeAttribute("style");
       document.getElementById('phone').removeAttribute("style");
       document.getElementById('phone').disabled = true;
-      document.getElementById('progressIco').innerHTML = "";
       document.getElementById('buttonSummit').style.display = "none";
       document.getElementById('result').removeAttribute("style");
 
@@ -72,50 +73,44 @@
 
 
   function state_ok() {
-      document.getElementById('progressFront').style.backgroundColor = "#007AFF";
-      document.getElementById('phone').style.color = "#007AFF";
-      document.getElementById('progressIco').innerHTML = "<i class='ico icon-check'></i>";
-      document.getElementById('progressIco').style.color = "#007AFF";
+      document.getElementById('progressFront').style.backgroundColor = "#00CEAC";
+      document.getElementById('phone').style.color = "#00CEAC";
       document.getElementById('resultIcon').src = "assets/images/fake-demo/demo-ok.svg";
-      document.getElementById('resultBackground').style.backgroundColor = "#007AFF";
-      document.getElementById('resultText').style.color = "#007AFF";
-      document.getElementById('resultText').innerHTML = "Congrats!";
+      document.getElementById('resultBackground').style.backgroundColor = "#00CEAC";
+      document.getElementById('resultText').style.color = "#00CEAC";
+      document.getElementById('resultText').innerHTML = '<%= I18n.t(:very_low_risk) %>';
       document.getElementById('result').style.display = "block";
       document.getElementById('resultDescription').style.display = "block";
       document.getElementById('resultDescription').style.color = "#3A3A3A";
-      document.getElementById('resultDescription').innerHTML = "Totally clean and protected!";
+      document.getElementById('resultDescription').innerHTML = '<%= I18n.t(:very_low_risk_text) %>';
 
   }
 
   function state_maybe() {
-      document.getElementById('progressFront').style.backgroundColor = "#F5A623";
-      document.getElementById('phone').style.color = "#F5A623";
-      document.getElementById('progressIco').innerHTML = "<i class='ico icon-eye'></i>";
-      document.getElementById('progressIco').style.color = "#F5A623";
+      document.getElementById('progressFront').style.backgroundColor = "#F5A81C";
+      document.getElementById('phone').style.color = "#F5A81C";
       document.getElementById('resultIcon').src = "assets/images/fake-demo/demo-maybe.svg";
-      document.getElementById('resultBackground').style.backgroundColor = "#F5A623";
-      document.getElementById('resultText').style.color = "#F5A623";
-      document.getElementById('resultText').innerHTML = "Maybe hacked!";
+      document.getElementById('resultBackground').style.backgroundColor = "#F5A81C";
+      document.getElementById('resultText').style.color = "#F5A81C";
+      document.getElementById('resultText').innerHTML =  '<%= I18n.t(:high_risk) %>';
       document.getElementById('result').style.display = "block";
       document.getElementById('resultDescription').style.display = "block";
       document.getElementById('resultDescription').style.color = "#3A3A3A";
-      document.getElementById('resultDescription').innerHTML = "Something is wrong…";
+      document.getElementById('resultDescription').innerHTML = '<%= I18n.t(:high_risk_text) %>';
 
   }
 
   function state_hacked() {
       document.getElementById('progressFront').style.backgroundColor = "#D0021B";
       document.getElementById('phone').style.color = "#D0021B";
-      document.getElementById('progressIco').innerHTML = "<i class='ic icon-ic-close'></i>";
-      document.getElementById('progressIco').style.color = "#D0021B";
       document.getElementById('resultIcon').src = "assets/images/fake-demo/demo-hacked.svg";
       document.getElementById('resultBackground').style.backgroundColor = "#D0021B";
       document.getElementById('resultText').style.color = "#D0021B";
-      document.getElementById('resultText').innerHTML = "Hacked!";
+      document.getElementById('resultText').innerHTML = '<%= I18n.t(:very_high_risk) %>';
       document.getElementById('result').style.display = "block";
       document.getElementById('resultDescription').style.display = "block";
       document.getElementById('resultDescription').style.color = "#D0021B";
-      document.getElementById('resultDescription').innerHTML = "Mobile Account could have been taken over due to recent SIM swap in last 24 hours";
+      document.getElementById('resultDescription').innerHTML = '<%= I18n.t(:very_high_risk_text) %>';
   }
 
 </script>
@@ -143,8 +138,8 @@
               <div class="separatorInput">
                 <div class="labelInput">MSISDN</div>
                 <div id="inputPhone">
-                  <input type="number" value="" placeholder="Insert number 123456789" id="phone" onkeyup="validateNumber()" min="0">
-                  <div id="progressIco"></div>
+                  <input type="number" value="" placeholder="<%= I18n.t(:input_insert_number) %> 123456789" id="phone" onkeyup="validateNumber()" min="0">
+
                   <div id="progressBack"></div>
                   <div id="progressFront"></div>
                 </div>

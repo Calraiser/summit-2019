@@ -21,7 +21,6 @@ gem 'puma'
 gem 'rack-contrib'
 
 
-
 group :development do
   gem 'middleman-livereload', '~> 3.4'
 end

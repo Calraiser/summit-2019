@@ -1,0 +1,74 @@
+---
+en:
+  # menu
+  atp: 'Account Takeover Protection'
+  match: 'MATCH'
+  verify: 'VERIFY'
+
+  # heading
+  header_note: 'Smart Digits – Mobile Identity & Attributes Sandboxes (UK)'
+  header_title: 'Digital Transformation with Smart Digits insights'
+  header_text: 'in order to consolidate and improve the safety and customer service'
+
+  box_01_text: 'The LUCA ATP service allows service providers to determine the timestamp of the last MSISDN/IMSI pairing change on the network and the unconditional call divert status of a MSISDN in real-time.'
+  box_02_texta: 'Match end user data bound to the end user MSISDN to verify their identity.'
+  box_02_textb: 'End user data including first name, last name, address and date of birth can be matched.'
+
+  box_03_text: 'Verify a mobile number instantly and securely within the mobile browser or mobile app when on the carrier mobile data network'
+
+  smart_digits_text: 'SMART DIGITS is a B2B platform and set of secure REST based API services that allows access to unique, personal, data insights. These insights can be used by service providers to transform and enhance their customer experience and user journeys, while at the same time improving security and reducing fraud.'
+
+  # contact
+  contact_title: 'Ready to get started?'
+  contact_text: 'Contact us for a demo'
+  contact_btn: 'Contact me'
+
+  # features
+  features: 'features'
+
+  atp_features_title: 'Make better informed risk decisions when using mobile channels for one-time passwords'
+  atp_features_text01: 'The LUCA ATP service allows service providers to determine the timestamp of the last MSISDN/IMSI pairing change on the network and the unconditional call divert status of a MSISDN in real-time.'
+  atp_features_text02: 'A change of MSISDN/IMSI pairing in the network is commonly known as a SIM Swap and allows subscribers to move their mobile number (MSISDN) legitimately from one SIM card to another, for example in the case of loss or damage to their existing SIM card or an upgrade to a new device with a different SIM card form factor. After a SIM Swap is actioned on the network the customer MSISDN will be associated to the new IMSI of the new SIM card.'
+  atp_features_text03: 'A feature of the mobile network is to allow subscribers to permanently or temporarily divert their mobile phone number (MSISDN) to another phone number. This will be transparent to callers to the subscriber’s MSISDN. In the case of unconditional call diverts (the only type supported by this service), all calls to the subscriber MSISDN will be diverted to the provisioned number. Other types of call divert (e.g. conditional) can be setup on the network for the subscriber MSISDN (e.g. when phone out of coverage) but these are not supported by this service.'
+
+  match_features_title: 'Verify your customer’s data instantly and securely'
+  match_features_text: 'The LUCA xMNO Match service allows service providers to match end user data bound to the end user MSISDN to verify their identity. End user data including first name, last name, address and date of birth can be matched. Insights for market segment of the MSISDN and lost or stolen status can also be requested.'
+
+  verify_features_title: 'Verify your customer’s mobile number instantly and securely'
+  verify_features_text01: 'The LUCA Verify service allows service providers to verify a mobile number instantly and securely within the mobile browser or mobile app when on the carrier mobile data network.'
+  verify_features_text02: 'Using technology built into the network, the service offers enhanced security for service providers and end users, with no need to trade off security for improved customer experience.'
+  verify_features_text03: 'The LUCA Verify API allows service providers to passively match the end user MSISDN to the MSISDN being used in the associated SIM card and mobile device in real-time on the carrier mobile network.'
+
+  # icons
+  icon_real_time_insight : 'Real-time insight'
+  icon_secures_sms: 'Secures SMS OTPs'
+  icon_low_latency: 'Low latency'
+  icon_high_availability: 'High availability'
+  icon_simple_integration: 'Simple integration'
+  icon_secure: 'Secure'
+  icon_identify_verification: 'Identify verification'
+  icon_improve_registration_rates: 'Improve registration rates'
+  icon_fast_authentication: 'Fast authentication'
+  icon_multi_platform: 'Multi platform'
+
+  box_explore: 'Explore'
+  btn_product_sheet: 'Product Sheet'
+  btn_see_demo: 'See demo online'
+
+  # footer
+  footer_text01: 'SMARTDIGITS is a B2B platform and set of secure REST based API services that'
+  footer_text02: 'allows access to unique, personal, data insights.'
+  footer_text03: 'These insights can be used by service providers to transform and enhance their customer experience and user journeys, while at the same time improving security and reducing fraud.'
+  footer_more_info: 'more info'
+
+  #demo
+  input_insert_number: 'Insert number'
+  input_summit: 'Summit'
+
+  very_low_risk: 'Very low risk'
+  very_low_risk_text: 'No mobile account takeover detected'
+
+  high_risk: 'High risk'
+  high_risk_text: 'Mobile account could have been taken over due to SIM swap in last 72 hours'
+  very_high_risk: 'Very High risk'
+  very_high_risk_text: 'Mobile Account could have been taken over due to recent SIM swap in last 24 hours'
