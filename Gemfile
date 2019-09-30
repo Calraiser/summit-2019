@@ -16,14 +16,15 @@ gem 'middleman-minify-html',    '~> 3.4.1'
 
 gem 'oga',                       '~> 2.8'
 
+gem 'rake'
+gem 'puma'
+gem 'rack-contrib'
+
+
+
 group :development do
   gem 'middleman-livereload', '~> 3.4'
 end
 
-group :test do
-  gem 'rake', '~> 10.4'
-  gem 'rspec', '~> 3.4'
-  gem 'capybara', '~> 2.5'
-end
 
 gem 'pry-byebug'
