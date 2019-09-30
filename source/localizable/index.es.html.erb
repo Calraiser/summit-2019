@@ -1,0 +1,57 @@
+---
+title: LUCA Summit
+---
+
+<section class="heading">
+  <%= partial "components/heading" %>
+</section>
+
+<section class="info">
+  <%= partial "components/info" %>
+</section>
+
+<section class="description">
+  <div class="content">
+  <div class="lds-tab--section">
+    <input checked="checked" id="atp" name="tabs" type="radio">
+    <div class="tab-label-content" id="atp">
+      <label class="bx--type-p tab-label" for="atp"><%= I18n.t(:atp) %></label>
+      <div class="tab-content atp">
+        <%=  partial :"components/description", :locals => {
+          :item => data.description.items.atp,
+          :link02 => true
+        } %>
+        <%=  partial :"components/global_actions", :locals => {
+            :link => 'atp-productsheet-en.pdf',
+            :demoLink => true
+        } %>
+      </div>
+    </div>
+    <input id="match" name="tabs" type="radio">
+    <div class="tab-label-content" id="match">
+      <label class="bx--type-p tab-label" for="match">MATCH</label>
+      <div class="tab-content match">
+        <%=  partial :"components/description", :locals => {
+          :item => data.description.items.match
+        } %>
+        <%=  partial :"components/global_actions", :locals => {
+          :link => 'match-productsheet-en.pdf'
+        } %>
+      </div>
+    </div>
+    <input id="verify" name="tabs" type="radio">
+    <div class="tab-label-content" id="verify">
+      <label class="bx--type-p tab-label" for="verify">VERIFY</label>
+      <div class="tab-content verify">
+        <%=  partial :"components/description", :locals => {
+          :item => data.description.items.verify
+        } %>
+        <%=  partial :"components/global_actions", :locals => {
+          :link => 'verify-productsheet-en.pdf'
+        } %>
+      </div>
+    </div>
+    <div class="slide"></div>
+  </div>
+</div>
+</section>
