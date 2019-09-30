@@ -8,7 +8,7 @@
 require 'rack'
 require 'rack/contrib/try_static'
 
-lang = if ENV['I18N'] then ENV['I18N'].to_sym else :fr end
+lang = if ENV['I18N'] then ENV['I18N'].to_sym else :es end
 
 # A rack module to disable caching
 class NoCache
