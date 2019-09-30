@@ -1,34 +1,43 @@
+#!/usr/bin/env rackup
 
-module Rack
+# This rackup file is used to test the static website.
+# Usage:
+#   I18N=fr rackup
+#   I18N ./config.ru
 
-  class TryStatic
+require 'rack'
+require 'rack/contrib/try_static'
 
-    def initialize(app, options)
-      @app = app
-      @try = ['', *options.delete(:try)]
-      @static = ::Rack::Static.new(lambda { [404, {}, []] }, options)
-    end
+lang = if ENV['I18N'] then ENV['I18N'].to_sym else :fr end
 
-    def call(env)
-      orig_path = env['PATH_INFO']
-      found = nil
-      @try.each do |path|
-        resp = @static.call(env.merge!({'PATH_INFO' => orig_path + path}))
-        break if 404 != resp[0] && found = resp
-      end
-      found or @app.call(env.merge!('PATH_INFO' => orig_path))
-    end
+# A rack module to disable caching
+class NoCache
+  def initialize(app, options)
+    @app = app
+  end
+  def call(env)
+    res = @app.call(env)
+    res[1]['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    res[1]['Expires'] = '0'
+    res
   end
 end
 
-use Rack::TryStatic, :root => "build", :urls => %w[/], :try => ['.html', 'index.html', '/index.html']
+use NoCache, {}
 
-# Run your own Rack app here or use this one to serve 404 messages:
-run lambda{ |env|
-  not_found_page = File.expand_path("../build/404.html", __FILE__)
-  if File.exist?(not_found_page)
-    [ 404, { 'Content-Type'  => 'text/html'}, [File.read(not_found_page)] ]
-  else
-    [ 404, { 'Content-Type'  => 'text/html' }, ['404 - page not found'] ]
-  end
+# Try a localized file (in /$lang/):
+use Rack::TryStatic,
+    :root => "build/#{lang}",
+    :urls => %w[/],
+    :try => [ " index.html" ]
+
+# Try a shared file (in /):
+use Rack::TryStatic,
+    :root => "build/",
+    :urls => %w[/],
+    :try => [ "index.html" ]
+
+# Otherwise 404:
+run Proc.new { |env|
+  ['404', {'Content-Type' => 'text/html'}, ['Not found.\n']]
 }
