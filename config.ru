@@ -39,5 +39,5 @@ use Rack::TryStatic,
 
 # Otherwise 404:
 run Proc.new { |env|
-  ['404', {'Content-Type' => 'text/html'}, ['Not found.\n']]
+  ['build/404/index.html', {'Content-Type' => 'text/html'}, ['Not found.\n']]
 }
