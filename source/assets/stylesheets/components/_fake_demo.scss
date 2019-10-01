@@ -38,10 +38,10 @@
 
 #buttonSummit {
   .c-btn {
-    border-color: #1AA992;
-    color: #1AA992;
+    border-color: #00CEAC;
+    color: #00CEAC;
     &:hover {
-      background: #1AA992;
+      background: #00CEAC;
       color: $white;;
     }
   }
@@ -67,7 +67,7 @@
   color: #999999;
   width: 100%;
   @include media($mobile) {
-    width: 240px;
+    width: 260px;
 
   }
 }
@@ -87,7 +87,7 @@ input::placeholder {
   width: 100%;
   height: 4px;
   @include media($mobile) {
-    width: 240px;
+    width: 260px;
 
   }
 }
@@ -118,7 +118,7 @@ input::placeholder {
   position: relative;
   width: 100%;
   @include media($mobile) {
-    width: 240px;
+    width: 260px;
   }
 }
 

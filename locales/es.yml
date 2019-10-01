@@ -64,7 +64,7 @@ es:
 
   #demo
   input_insert_number: 'Introducir un número'
-  input_summit: 'Summit'
+  input_summit: 'Comprobar'
 
   very_low_risk: 'Riesgo Muy Bajo'
   very_low_risk_text: 'Suplantación de la identidad de la cuenta móvil no detectada'

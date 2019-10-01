@@ -23,7 +23,6 @@
       document.getElementById('result').removeAttribute("style");
       document.getElementById('resultDescription').removeAttribute("style");
       document.getElementById('phone').removeAttribute("style");
-      document.getElementById('progressIco').removeAttribute("style");
       document.getElementById('progressBack').removeAttribute("style");
       document.getElementById('progressFront').removeAttribute("style");
   }
@@ -149,7 +148,7 @@
 
             <div class="col-xs-12 col-sm-4">
               <div class="separatorButton" id="buttonSummit">
-                <div onclick="launch()" class="c-btn btn-secondary btn-medium">Summit</div>
+                <div onclick="launch()" class="c-btn btn-secondary btn-medium"><%= I18n.t(:input_summit) %></div>
               </div>
 
               <div class="separatorResult" id="result">
