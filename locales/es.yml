@@ -66,7 +66,7 @@ es:
   input_insert_number: 'Introducir un número'
   input_summit: 'Summit'
 
-  very_low_risk: 'iesgo Muy Bajo'
+  very_low_risk: 'Riesgo Muy Bajo'
   very_low_risk_text: 'Suplantación de la identidad de la cuenta móvil no detectada'
   high_risk: 'Riesto Alto'
   high_risk_text: 'La identidad de la cuenta móvil podría haber sido suplantada debido a un cambio de SIM en las últimas 72 horas'
