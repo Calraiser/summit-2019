@@ -23,6 +23,8 @@ class NoCache
   end
 end
 
+
+
 use NoCache, {}
 
 # Try a localized file (in /$lang/):
