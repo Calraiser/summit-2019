@@ -75,7 +75,7 @@
   function state_ok() {
       document.getElementById('progressFront').style.backgroundColor = "#00CEAC";
       document.getElementById('phone').style.color = "#00CEAC";
-      document.getElementById('resultIcon').src = "assets/images/fake-demo/demo-ok.svg";
+      document.getElementById('resultIcon').src = "/assets/images/fake-demo/demo-ok.svg";
       document.getElementById('resultBackground').style.backgroundColor = "#00CEAC";
       document.getElementById('resultText').style.color = "#00CEAC";
       document.getElementById('resultText').innerHTML = '<%= I18n.t(:very_low_risk) %>';
@@ -89,7 +89,7 @@
   function state_maybe() {
       document.getElementById('progressFront').style.backgroundColor = "#F5A81C";
       document.getElementById('phone').style.color = "#F5A81C";
-      document.getElementById('resultIcon').src = "assets/images/fake-demo/demo-maybe.svg";
+      document.getElementById('resultIcon').src = "/assets/images/fake-demo/demo-maybe.svg";
       document.getElementById('resultBackground').style.backgroundColor = "#F5A81C";
       document.getElementById('resultText').style.color = "#F5A81C";
       document.getElementById('resultText').innerHTML =  '<%= I18n.t(:high_risk) %>';
@@ -103,7 +103,7 @@
   function state_hacked() {
       document.getElementById('progressFront').style.backgroundColor = "#D0021B";
       document.getElementById('phone').style.color = "#D0021B";
-      document.getElementById('resultIcon').src = "assets/images/fake-demo/demo-hacked.svg";
+      document.getElementById('resultIcon').src = "/assets/images/fake-demo/demo-hacked.svg";
       document.getElementById('resultBackground').style.backgroundColor = "#D0021B";
       document.getElementById('resultText').style.color = "#D0021B";
       document.getElementById('resultText').innerHTML = '<%= I18n.t(:very_high_risk) %>';
